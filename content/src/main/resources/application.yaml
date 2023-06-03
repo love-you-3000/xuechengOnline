@@ -1,0 +1,11 @@
+server:
+  port: 63040
+  servlet:
+    context-path: /content
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3309/xc_content?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 990911
+
