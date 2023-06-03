@@ -3,6 +3,7 @@ package com.xuecheng.content.controller;
 import com.xuecheng.content.dto.QueryCourseParamsDto;
 import com.xuecheng.content.entity.CourseBase;
 import com.xuecheng.content.service.CourseBaseService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import com.xuecheng.base.model.PageParams;
@@ -22,9 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Slf4j
 @RestController
+@Api(value = "课程信息编辑接口",tags = "课程信息编辑接口")
 @RequestMapping()
 public class CourseBaseController {
-
 
     @Autowired
     private CourseBaseService courseBaseService;

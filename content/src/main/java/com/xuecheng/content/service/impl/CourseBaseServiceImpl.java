@@ -42,7 +42,6 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
         queryWrapper.eq(StringUtils.isNotEmpty(queryCourseParamsDto.getPublishStatus()), CourseBase::getStatus, queryCourseParamsDto.getPublishStatus());
         //分页参数
         Page<CourseBase> page = new Page<>(pageParams.getPageNo(), pageParams.getPageSize());
-
         //分页查询E page 分页参数, @Param("ew") Wrapper<T> queryWrapper 查询条件
         Page<CourseBase> pageResult = courseBaseMapper.selectPage(page, queryWrapper);
         //数据

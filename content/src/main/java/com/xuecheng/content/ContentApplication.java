@@ -1,5 +1,6 @@
 package com.xuecheng.content;
 
+import com.spring4all.swagger.EnableSwagger2Doc;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 @SpringBootApplication
 @ComponentScan("com.xuecheng")
 @MapperScan("com.xuecheng.content.mapper")
+@EnableSwagger2Doc
 public class ContentApplication {
     private static final Logger LOG = LoggerFactory.getLogger(ContentApplication.class);
     public static void main(String[] args) {
