@@ -23,5 +23,4 @@ public class QueryCourseParamsDto {
     //发布状态
     @ApiModelProperty("发布状态")
     private String publishStatus;
-
 }

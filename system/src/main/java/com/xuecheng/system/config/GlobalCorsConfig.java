@@ -29,7 +29,7 @@ public class GlobalCorsConfig {
         //允许所有请求方法跨域调用
         config.addAllowedMethod("*");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", config);
+        source.registerCorsConfiguration("/**", config); // 允许所有来源跨域访问
         return new CorsFilter(source);
     }
 }

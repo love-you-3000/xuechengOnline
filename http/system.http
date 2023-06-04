@@ -1,0 +1,2 @@
+GET  {{system_host}}/system/dictionary/all
+Content-Type: application/json

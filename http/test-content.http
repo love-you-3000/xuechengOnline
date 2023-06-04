@@ -1,4 +1,4 @@
-POST localhost:63040/content/course/list?pageNo=1&pageSize=3
+POST  {{content_host}}/content/course/list?pageNo=1&pageSize=3
 Content-Type: application/json
 
 {
@@ -6,3 +6,4 @@ Content-Type: application/json
   "courseName": "java",
   "publishStatus":""
 }
+
