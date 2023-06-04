@@ -2,6 +2,7 @@ package com.xuecheng.content.controller;
 
 import com.xuecheng.content.dto.QueryCourseParamsDto;
 import com.xuecheng.content.entity.CourseBase;
+import com.xuecheng.content.entity.CourseCategory;
 import com.xuecheng.content.service.CourseBaseService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -9,10 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
@@ -35,4 +33,6 @@ public class CourseBaseController {
     public PageResult<CourseBase> list(PageParams pageParams, @RequestBody(required = false) QueryCourseParamsDto queryCourseParamsDto) {
         return courseBaseService.queryCourseBaseList(pageParams, queryCourseParamsDto);
     }
+
+
 }
