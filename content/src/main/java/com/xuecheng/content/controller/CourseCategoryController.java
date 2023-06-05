@@ -33,6 +33,6 @@ public class CourseCategoryController {
     @GetMapping("/course-category/tree-nodes")
     public List<CourseCategoryTreeDto> getCategory()
     {
-        return courseCategoryService.queryCategory();
+        return courseCategoryService.queryTreeNodes("1");
     }
 }

@@ -16,5 +16,5 @@ import java.util.List;
  * @since 2023-06-03
  */
 public interface CourseCategoryService extends IService<CourseCategory> {
-    List<CourseCategoryTreeDto> queryCategory();
+    List<CourseCategoryTreeDto> queryTreeNodes(String id);
 }

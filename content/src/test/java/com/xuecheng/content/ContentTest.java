@@ -4,9 +4,12 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
+import com.xuecheng.content.dto.CourseCategoryTreeDto;
 import com.xuecheng.content.dto.QueryCourseParamsDto;
 import com.xuecheng.content.entity.CourseBase;
 import com.xuecheng.content.mapper.CourseBaseMapper;
+import com.xuecheng.content.mapper.CourseCategoryMapper;
+import com.xuecheng.content.service.CourseCategoryService;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -25,6 +28,12 @@ import java.util.List;
 public class ContentTest {
     @Autowired
     CourseBaseMapper courseBaseMapper;
+
+    @Autowired
+    CourseCategoryMapper courseCategoryMapper;
+
+    @Autowired
+    CourseCategoryService service;
 
     @Test
     void testCourseBaseMapper() {
@@ -63,5 +72,12 @@ public class ContentTest {
         //准备返回数据 List<T> items, long counts, long page, long pageSize
         PageResult<CourseBase> courseBasePageResult = new PageResult<>(items, total, pageParams.getPageNo(), pageParams.getPageSize());
         System.out.println(courseBasePageResult);
+    }
+
+    @Test
+    void testCourseCategoryMapper()
+    {
+        List<CourseCategoryTreeDto> courseCategoryTreeDtos = service.queryTreeNodes("1");
+        System.out.println(courseCategoryTreeDtos);
     }
 }

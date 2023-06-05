@@ -1,20 +1,18 @@
 package com.xuecheng.content.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.xuecheng.base.model.PageResult;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xuecheng.content.dto.CourseCategoryTreeDto;
 import com.xuecheng.content.entity.CourseCategory;
 import com.xuecheng.content.mapper.CourseCategoryMapper;
 import com.xuecheng.content.service.CourseCategoryService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * <p>
@@ -29,21 +27,32 @@ public class CourseCategoryServiceImpl extends ServiceImpl<CourseCategoryMapper,
 
     @Autowired
     CourseCategoryMapper courseCategoryMapper;
-    @Override
-    public List<CourseCategoryTreeDto> queryCategory() {
-        ArrayList<CourseCategoryTreeDto> item = new ArrayList<>();
-        LambdaQueryWrapper<CourseCategory> wrapper = new LambdaQueryWrapper<>();
-        wrapper.eq(CourseCategory::getParentid, 1);
-        List<CourseCategory> list = courseCategoryMapper.selectList(wrapper);
-        for (CourseCategory courseCategory : list) {
-            CourseCategoryTreeDto courseCategoryTreeDto = new CourseCategoryTreeDto();
-            BeanUtils.copyProperties(courseCategory,courseCategoryTreeDto);
-            LambdaQueryWrapper<CourseCategory> queryWrapper = new LambdaQueryWrapper<>();
-            queryWrapper.eq(CourseCategory::getParentid,courseCategory.getParentid());
-            courseCategoryTreeDto.setChildrenTreeNodes(courseCategoryMapper.selectList(queryWrapper));
-            item.add(courseCategoryTreeDto);
-        }
-        return item;
 
+    @Override
+    public List<CourseCategoryTreeDto> queryTreeNodes(String id) {
+        List<CourseCategoryTreeDto> courseCategoryTreeDtos = courseCategoryMapper.selectTreeNodes(id);
+
+        //将list转map,以备使用,排除根节点
+        Map<String, CourseCategoryTreeDto> mapTemp = courseCategoryTreeDtos.stream().
+                filter(item -> !id.equals(item.getId())).
+                collect(Collectors.toMap(CourseCategory::getId, value -> value, (key1, key2) -> key2));
+        //最终返回的list
+        List<CourseCategoryTreeDto> categoryTreeDtos = new ArrayList<>();
+        //依次遍历每个元素,排除根节点
+        courseCategoryTreeDtos.stream().forEach(item -> {
+            if (item.getParentid().equals(id)) {
+                categoryTreeDtos.add(item);
+            }
+            //找到当前节点的父节点
+            CourseCategoryTreeDto courseCategoryTreeDto = mapTemp.get(item.getParentid());
+            if (courseCategoryTreeDto != null) {
+                if (courseCategoryTreeDto.getChildrenTreeNodes() == null) {
+                    courseCategoryTreeDto.setChildrenTreeNodes(new ArrayList<>());
+                }
+                //下边开始往ChildrenTreeNodes属性中放子节点
+                courseCategoryTreeDto.getChildrenTreeNodes().add(item);
+            }
+        });
+        return categoryTreeDtos;
     }
 }
