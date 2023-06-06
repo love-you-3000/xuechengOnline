@@ -45,7 +45,7 @@ public class CourseBaseController {
         return courseBaseService.createCourseBase(companyId, addCourseDto);
     }
 
-    @ApiOperation("修改课程基本信息")
+    @ApiOperation("获取课程基本信息")
     @GetMapping("/course/{id}")
     public CourseBaseInfoDto getCourseBaseById(@PathVariable(value = "id") Long courseId) {
         return courseBaseService.getCourseBaseInfoDto(courseId);
@@ -57,4 +57,5 @@ public class CourseBaseController {
         Long companyId = 1232141425L;
         return courseBaseService.updateCourseBase(companyId, editCourseDto);
     }
+
 }

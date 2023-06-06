@@ -1,7 +1,10 @@
 package com.xuecheng.content.service;
 
+import com.xuecheng.content.dto.TeachplanDto;
 import com.xuecheng.content.entity.Teachplan;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface TeachplanService extends IService<Teachplan> {
 
+    List<TeachplanDto> getTreeNodes(Long courseId);
 }
