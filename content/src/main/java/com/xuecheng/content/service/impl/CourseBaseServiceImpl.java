@@ -201,8 +201,10 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
             throw new RuntimeException("更新课程失败！");
         }
         CourseMarket courseMarket = courseMarketMapper.selectById(courseId);
-        BeanUtils.copyProperties(dto,courseMarket);
-        saveCourseMarket(courseMarket);
+        if(courseMarket!=null) {
+            BeanUtils.copyProperties(dto, courseMarket);
+            saveCourseMarket(courseMarket);
+        }
         return getCourseBaseInfoDto(courseId);
 
 
