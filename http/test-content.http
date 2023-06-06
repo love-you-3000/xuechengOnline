@@ -81,5 +81,5 @@ Content-Type: application/json
 }
 
 ### 查询课程计划
-GET {{content_host}}/content/teachplan/74/tree-nodes
+GET {{content_host}}/content/teachplan/117/tree-nodes
 Content-Type: application/json

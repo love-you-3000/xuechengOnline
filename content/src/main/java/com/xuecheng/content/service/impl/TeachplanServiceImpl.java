@@ -50,11 +50,11 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
                 LambdaQueryWrapper<Teachplan> teachplanWrapper = new LambdaQueryWrapper<>();
                 teachplanWrapper.eq(Teachplan::getParentid, item.getId());
                 List<Teachplan> list = teachplanMapper.selectList(teachplanWrapper);
-                dto.setTeachPlanTreeNodes(list.stream().map(plan->{
+                dto.setTeachPlanTreeNodes(list.stream().map(plan -> {
                     TeachplanDto dto1 = new TeachplanDto();
-                    BeanUtils.copyProperties(plan,dto1);
+                    BeanUtils.copyProperties(plan, dto1);
                     LambdaQueryWrapper<TeachplanMedia> mediaLambdaQueryWrapper = new LambdaQueryWrapper<>();
-                    mediaLambdaQueryWrapper.eq(TeachplanMedia::getTeachplanId,dto1.getId());
+                    mediaLambdaQueryWrapper.eq(TeachplanMedia::getTeachplanId, dto1.getId());
                     dto1.setTeachplanMedia(mediaMapper.selectOne(mediaLambdaQueryWrapper));
                     return dto1;
                 }).collect(Collectors.toList()));
@@ -63,5 +63,19 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
             return res;
         }
         return null;
+    }
+
+    @Override
+    public void saveTeachplan(Teachplan teachplan) {
+        if (teachplan.getId() == null) {
+            //新增
+            LambdaQueryWrapper<Teachplan> wrapper = new LambdaQueryWrapper<>();
+            wrapper.eq(Teachplan::getParentid, teachplan.getParentid());
+            wrapper.eq(Teachplan::getCourseId, teachplan.getCourseId());
+            Integer integer = teachplanMapper.selectCount(wrapper);
+            teachplan.setOrderby(integer + 1);
+            teachplanMapper.insert(teachplan);
+        }
+        teachplanMapper.updateById(teachplan);
     }
 }

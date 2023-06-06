@@ -17,4 +17,6 @@ import java.util.List;
 public interface TeachplanService extends IService<Teachplan> {
 
     List<TeachplanDto> getTreeNodes(Long courseId);
+
+    void saveTeachplan(Teachplan saveTeachplanDto);
 }
