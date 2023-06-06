@@ -3,6 +3,7 @@ package com.xuecheng.content.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.xuecheng.base.exception.XuechengException;
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
 import com.xuecheng.content.dto.AddCourseDto;
@@ -69,11 +70,38 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
 
     @Transactional
     @Override
-    public CourseBaseInfoDto createCourseBase(Long companyId, AddCourseDto addCourseDto) {
+    public CourseBaseInfoDto createCourseBase(Long companyId, AddCourseDto dto) {
         // 参数合法性校验
+        if (StringUtils.isBlank(dto.getName())) {
+            throw new XuechengException("课程名称为空");
+        }
+
+        if (StringUtils.isBlank(dto.getMt())) {
+            throw new XuechengException("课程分类为空");
+        }
+
+        if (StringUtils.isBlank(dto.getSt())) {
+            throw new XuechengException("课程分类为空");
+        }
+
+        if (StringUtils.isBlank(dto.getGrade())) {
+            throw new XuechengException("课程等级为空");
+        }
+
+        if (StringUtils.isBlank(dto.getTeachmode())) {
+            throw new XuechengException("教育模式为空");
+        }
+
+        if (StringUtils.isBlank(dto.getUsers())) {
+            throw new XuechengException("适应人群");
+        }
+
+        if (StringUtils.isBlank(dto.getCharge())) {
+            throw new XuechengException("收费规则为空");
+        }
         CourseBase courseBase = new CourseBase();
         CourseMarket courseMarket = new CourseMarket();
-        BeanUtils.copyProperties(addCourseDto, courseBase);
+        BeanUtils.copyProperties(dto, courseBase);
         courseBase.setCompanyId(companyId);
         courseBase.setCreateDate(LocalDateTime.now());
         // todo 创建人和更新人加了认证后加入
@@ -84,11 +112,13 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
         if (insert <= 0) {
             throw new RuntimeException("更新课程失败！");
         }
-        BeanUtils.copyProperties(addCourseDto, courseMarket);
+        BeanUtils.copyProperties(dto, courseMarket);
         Long CourseId = courseBase.getId();
         courseMarket.setId(CourseId);
-        courseBaseMapper.insert(courseBase);
-        courseMarketMapper.insert(courseMarket);
+        if (saveCourseMarket(courseMarket) <= 0) {
+            throw new RuntimeException("保存课程营销信息失败");
+        }
+        //查询课程基本信息及营销信息并返回
         return getCourseBaseInfo(CourseId);
     }
 
@@ -98,12 +128,12 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
         //收费规则
         String charge = courseMarketNew.getCharge();
         if (StringUtils.isBlank(charge)) {
-            throw new RuntimeException("收费规则没有选择");
+            throw new XuechengException("收费规则没有选择");
         }
         //收费规则为收费
         if (charge.equals("201001")) {
             if (courseMarketNew.getPrice() == null || courseMarketNew.getPrice() <= 0) {
-                throw new RuntimeException("课程为收费价格不能为空且必须大于0");
+                throw new XuechengException("课程为收费价格不能为空且必须大于0");
             }
         }
         //根据id从课程营销表查询

@@ -2,6 +2,7 @@ package com.xuecheng.base.aspect;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.support.spring.PropertyPreFilters;
+import com.xuecheng.base.exception.XuechengException;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -75,7 +76,13 @@ public class LogAspect {
     @Around("controllerPointcut()")
     public Object doAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         long startTime = System.currentTimeMillis();
-        Object result = proceedingJoinPoint.proceed();
+        Object result = null;
+        try {
+            result = proceedingJoinPoint.proceed();
+        } catch (Throwable e) {
+            LOG.info("------------- 请求异常, 结束 耗时：{} ms -------------", System.currentTimeMillis() - startTime);
+            throw e;
+        }
         // 排除字段，敏感字段或太长的字段不显示：身份证、手机号、邮箱、密码等
         String[] excludeProperties = {};
         PropertyPreFilters filters = new PropertyPreFilters();
@@ -85,5 +92,4 @@ public class LogAspect {
         LOG.info("------------- 结束 耗时：{} ms -------------", System.currentTimeMillis() - startTime);
         return result;
     }
-
 }

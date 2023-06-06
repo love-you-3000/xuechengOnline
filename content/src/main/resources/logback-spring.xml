@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <!-- 修改一下路径-->
-    <property name="PATH" value="./log/content"/>
+    <property name="PATH" value="../log/content"/>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -9,7 +9,6 @@
             <Pattern>%d{mm:ss.SSS} %highlight(%-5level) %blue(%-50logger{50}:%-4line) [%thread] %msg%n</Pattern>
         </encoder>
     </appender>
-
     <appender name="TRACE_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${PATH}/trace.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -18,9 +17,10 @@
                 <maxFileSize>10MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
-        <layout>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %-50logger{50}:%-4line %msg%n</pattern>
-        </layout>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %-50logger{50}:%-4line  %msg%n</pattern>
+            <charset>UTF-8</charset> <!-- 设置字符集 -->
+        </encoder>
     </appender>
 
     <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -31,9 +31,10 @@
                 <maxFileSize>10MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
-        <layout>
+        <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %-50logger{50}:%-4line  %msg%n</pattern>
-        </layout>
+        <charset>UTF-8</charset> <!-- 设置字符集 -->
+    </encoder>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>ERROR</level>
             <onMatch>ACCEPT</onMatch>
