@@ -5,6 +5,7 @@ import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
 import com.xuecheng.content.dto.AddCourseDto;
 import com.xuecheng.content.dto.CourseBaseInfoDto;
+import com.xuecheng.content.dto.EditCourseDto;
 import com.xuecheng.content.dto.QueryCourseParamsDto;
 import com.xuecheng.content.entity.CourseBase;
 
@@ -21,5 +22,9 @@ public interface CourseBaseService extends IService<CourseBase> {
     PageResult<CourseBase> queryCourseBaseList(PageParams pageParams, QueryCourseParamsDto queryCourseParamsDto);
 
     CourseBaseInfoDto createCourseBase(Long companyId, AddCourseDto addCourseDto);
+
+    CourseBaseInfoDto getCourseBaseInfoDto(Long courseId);
+
+    CourseBaseInfoDto updateCourseBase(Long companyId, EditCourseDto dto);
 
 }

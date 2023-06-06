@@ -5,6 +5,7 @@ import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
 import com.xuecheng.content.dto.AddCourseDto;
 import com.xuecheng.content.dto.CourseBaseInfoDto;
+import com.xuecheng.content.dto.EditCourseDto;
 import com.xuecheng.content.dto.QueryCourseParamsDto;
 import com.xuecheng.content.entity.CourseBase;
 import com.xuecheng.content.service.CourseBaseService;
@@ -13,10 +14,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
@@ -45,5 +43,18 @@ public class CourseBaseController {
     public CourseBaseInfoDto createCourseBase(@RequestBody @Validated(ValidationGroups.Insert.class) AddCourseDto addCourseDto) {
         Long companyId = 1232141425L;
         return courseBaseService.createCourseBase(companyId, addCourseDto);
+    }
+
+    @ApiOperation("修改课程基本信息")
+    @GetMapping("/course/{id}")
+    public CourseBaseInfoDto getCourseBaseById(@PathVariable(value = "id") Long courseId) {
+        return courseBaseService.getCourseBaseInfoDto(courseId);
+    }
+
+    @ApiOperation("修改课程基础信息")
+    @PutMapping("/course")
+    public CourseBaseInfoDto modifyCourseBase(@RequestBody @Validated EditCourseDto editCourseDto) {
+        Long companyId = 1232141425L;
+        return courseBaseService.updateCourseBase(companyId, editCourseDto);
     }
 }
