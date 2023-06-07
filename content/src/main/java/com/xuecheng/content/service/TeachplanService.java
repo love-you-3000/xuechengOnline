@@ -22,5 +22,6 @@ public interface TeachplanService extends IService<Teachplan> {
 
     void move(Long teachPlanId, boolean up);
 
+    void deleteTeachPlan(Long teachPlanId);
 }
 

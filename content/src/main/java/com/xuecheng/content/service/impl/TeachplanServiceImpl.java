@@ -13,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Comparator;
 import java.util.List;
@@ -66,6 +67,7 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
         return null;
     }
 
+    @Transactional
     @Override
     public void saveTeachplan(Teachplan teachplan) {
         if (teachplan.getId() == null) {
@@ -80,6 +82,7 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
         teachplanMapper.updateById(teachplan);
     }
 
+    @Transactional
     @Override
     public void move(Long teachPlanId, boolean up) {
         Teachplan teachplan = teachplanMapper.selectById(teachPlanId);
@@ -104,6 +107,45 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
             temp.setOrderby(up ? teachplan.getOrderby() + 1 : teachplan.getOrderby() - 1);
             teachplanMapper.updateById(teachplan);
             teachplanMapper.updateById(temp);
+        }
+    }
+
+    @Transactional
+    @Override
+    public void deleteTeachPlan(Long teachPlanId) {
+        // 删除第一级别的大章节时要求大章节下边没有小章节时方可删除。
+        Teachplan teachplan = teachplanMapper.selectById(teachPlanId);
+        if (teachplan.getParentid() == 0) {
+            // 删除大章节
+            LambdaQueryWrapper<Teachplan> wrapper = new LambdaQueryWrapper<>();
+            wrapper.eq(Teachplan::getCourseId, teachplan.getCourseId());
+            wrapper.eq(Teachplan::getParentid, teachplan.getId());
+            Integer count = teachplanMapper.selectCount(wrapper);
+            if (count != 0) throw new XuechengException("课程计划信息还有子级信息，无法操作");
+            teachplanMapper.deleteById(teachPlanId);
+        }
+        //删除第二级别的小章节的同时需要将teachplan_media表关联的信息也删除。
+        else {
+            LambdaQueryWrapper<TeachplanMedia> mediaWrapper = new LambdaQueryWrapper<>();
+            mediaWrapper.eq(TeachplanMedia::getTeachplanId, teachPlanId);
+            mediaWrapper.eq(TeachplanMedia::getCourseId, teachplan.getCourseId());
+            teachplanMapper.deleteById(teachPlanId);
+            mediaMapper.delete(mediaWrapper);
+        }
+        changeOrderBy(teachplan.getCourseId(), teachplan.getParentid(), teachplan.getOrderby());
+    }
+
+    private void changeOrderBy(Long courseId, Long parentId, Integer orderBy) {
+        // 所有同级课程，序号比orderBy大的全部减1
+        // todo 该逻辑对数据库操作太频繁，后期估计要调整排序逻辑
+        LambdaQueryWrapper<Teachplan> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(Teachplan::getCourseId, courseId);
+        wrapper.eq(Teachplan::getParentid, parentId);
+        wrapper.gt(Teachplan::getOrderby, orderBy);
+        List<Teachplan> list = teachplanMapper.selectList(wrapper);
+        list.forEach(item -> item.setOrderby(item.getOrderby() - 1));
+        for (Teachplan teachplan : list) {
+            teachplanMapper.updateById(teachplan);
         }
     }
 }
