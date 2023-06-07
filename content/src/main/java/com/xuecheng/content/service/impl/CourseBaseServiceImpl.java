@@ -10,12 +10,8 @@ import com.xuecheng.content.dto.AddCourseDto;
 import com.xuecheng.content.dto.CourseBaseInfoDto;
 import com.xuecheng.content.dto.EditCourseDto;
 import com.xuecheng.content.dto.QueryCourseParamsDto;
-import com.xuecheng.content.entity.CourseBase;
-import com.xuecheng.content.entity.CourseCategory;
-import com.xuecheng.content.entity.CourseMarket;
-import com.xuecheng.content.mapper.CourseBaseMapper;
-import com.xuecheng.content.mapper.CourseCategoryMapper;
-import com.xuecheng.content.mapper.CourseMarketMapper;
+import com.xuecheng.content.entity.*;
+import com.xuecheng.content.mapper.*;
 import com.xuecheng.content.service.CourseBaseService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -46,6 +42,16 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
 
     @Autowired
     CourseCategoryMapper courseCategoryMapper;
+
+    @Autowired
+    CourseTeacherMapper teacherMapper;
+
+    @Autowired
+    TeachplanMapper teachplanMapper;
+
+    @Autowired
+    TeachplanMediaMapper mediaMapper;
+
 
     @Override
     public PageResult<CourseBase> queryCourseBaseList(PageParams pageParams, QueryCourseParamsDto queryCourseParamsDto) {
@@ -190,24 +196,50 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
     public CourseBaseInfoDto updateCourseBase(Long companyId, EditCourseDto dto) {
         Long courseId = dto.getId();
         CourseBase courseBase = courseBaseMapper.selectById(courseId);
-        if(courseBase==null) throw new XuechengException("课程不存在！");
+        if (courseBase == null) throw new XuechengException("课程不存在！");
         //校验本机构只能修改本机构的课程
-        if(!courseBase.getCompanyId().equals(companyId)){
+        if (!courseBase.getCompanyId().equals(companyId)) {
             throw new XuechengException("不能修改其他机构的课程！");
         }
-        BeanUtils.copyProperties(dto,courseBase);
+        BeanUtils.copyProperties(dto, courseBase);
         courseBase.setChangeDate(LocalDateTime.now());
-        if(courseBaseMapper.insert(courseBase)<=0){
+        if (courseBaseMapper.insert(courseBase) <= 0) {
             throw new RuntimeException("更新课程失败！");
         }
         CourseMarket courseMarket = courseMarketMapper.selectById(courseId);
-        if(courseMarket!=null) {
+        if (courseMarket != null) {
             BeanUtils.copyProperties(dto, courseMarket);
             saveCourseMarket(courseMarket);
         }
         return getCourseBaseInfoDto(courseId);
 
 
+    }
+
+    @Transactional
+    @Override
+    public void deleteCourse(Long courseId) {
+        // 删除课程需要删除课程相关的基本信息、营销信息、课程计划、课程教师信息。
+        CourseBase courseBase = courseBaseMapper.selectById(courseId);
+        // 课程的审核状态为未提交时方可删除
+        if (!courseBase.getAuditStatus().equals("202002"))
+            throw new XuechengException("课程已提交不能删除！");
+        // 删除营销信息
+        courseMarketMapper.deleteById(courseId);
+        // 删除课程计划
+        LambdaQueryWrapper<Teachplan> teachplanWrapper = new LambdaQueryWrapper<>();
+        teachplanWrapper.eq(Teachplan::getCourseId, courseId);
+        teachplanMapper.delete(teachplanWrapper);
+        // 删除媒资信息
+        LambdaQueryWrapper<TeachplanMedia> mediaWrapper = new LambdaQueryWrapper<>();
+        mediaWrapper.eq(TeachplanMedia::getCourseId, courseId);
+        mediaMapper.delete(mediaWrapper);
+        // 删除教师信息
+        LambdaQueryWrapper<CourseTeacher> teacherWrapper = new LambdaQueryWrapper<>();
+        teacherWrapper.eq(CourseTeacher::getCourseId, courseId);
+        teacherMapper.delete(teacherWrapper);
+        // 最后删除课程信息
+        courseBaseMapper.deleteById(courseId);
     }
 
 }
