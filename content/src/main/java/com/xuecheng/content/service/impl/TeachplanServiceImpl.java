@@ -38,18 +38,18 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
         LambdaQueryWrapper<Teachplan> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(Teachplan::getCourseId, courseId);
         wrapper.eq(Teachplan::getParentid, 0);
-        List<Teachplan> teachplans = teachplanMapper.selectList(wrapper); // 该课程的所有父课程
-        if (teachplans != null) {
-            List<TeachplanDto> res = teachplans.stream().map((item -> {
+        List<Teachplan> teachPlan = teachplanMapper.selectList(wrapper); // 该课程的所有父课程
+        if (teachPlan != null) {
+            return teachPlan.stream().map((item -> {
                 TeachplanDto dto = new TeachplanDto();
                 BeanUtils.copyProperties(item, dto);
                 LambdaQueryWrapper<TeachplanMedia> mediaWrapper = new LambdaQueryWrapper<>();
                 mediaWrapper.eq(TeachplanMedia::getTeachplanId, item.getId());
                 TeachplanMedia teachplanMedia = mediaMapper.selectOne(mediaWrapper);
                 dto.setTeachplanMedia(teachplanMedia);
-                LambdaQueryWrapper<Teachplan> teachplanWrapper = new LambdaQueryWrapper<>();
-                teachplanWrapper.eq(Teachplan::getParentid, item.getId());
-                List<Teachplan> list = teachplanMapper.selectList(teachplanWrapper);
+                LambdaQueryWrapper<Teachplan> teachPlanWrapper = new LambdaQueryWrapper<>();
+                teachPlanWrapper.eq(Teachplan::getParentid, item.getId());
+                List<Teachplan> list = teachplanMapper.selectList(teachPlanWrapper);
                 dto.setTeachPlanTreeNodes(list.stream().map(plan -> {
                     TeachplanDto dto1 = new TeachplanDto();
                     BeanUtils.copyProperties(plan, dto1);
@@ -60,7 +60,6 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
                 }).collect(Collectors.toList()));
                 return dto;
             })).collect(Collectors.toList());
-            return res;
         }
         return null;
     }
