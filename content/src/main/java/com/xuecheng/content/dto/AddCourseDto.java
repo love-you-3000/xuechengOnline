@@ -20,7 +20,7 @@ import java.math.BigDecimal;
 public class AddCourseDto {
  @NotEmpty(message = "新增课程名称不能为空", groups = {ValidationGroups.Insert.class})
  @NotEmpty(message = " 修改课程名称不能为空", groups = {ValidationGroups.Update.class})
- @ApiModelProperty(value = "课程名称", required = true)
+ @ApiModelProperty(value = "课程名称",required = true)
  private String name;
 
  @NotEmpty(message = "适用人群不能为空")
@@ -56,9 +56,9 @@ public class AddCourseDto {
  @ApiModelProperty(value = "收费规则，对应数据字典", required = true)
  private String charge;
 
- @ApiModelProperty(value = "价格")
+ @ApiModelProperty(value = "价格",example = "12.0")
  private Float price;
- @ApiModelProperty(value = "原价")
+ @ApiModelProperty(value = "原价",example = "12.0")
  private Float originalPrice;
 
  @ApiModelProperty(value = "qq")
@@ -69,6 +69,6 @@ public class AddCourseDto {
  @ApiModelProperty(value = "电话")
  private String phone;
 
- @ApiModelProperty(value = "有效期")
+ @ApiModelProperty(value = "有效期",example ="1")
  private Integer validDays;
 }

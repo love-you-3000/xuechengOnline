@@ -12,6 +12,7 @@
         <module>content</module>
         <module>base</module>
         <module>system</module>
+        <module>gateway</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
