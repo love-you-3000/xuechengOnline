@@ -57,7 +57,7 @@ Content-Type: application/json
 }
 
 ###
-GET {{content_host}}/content/course/2
+GET {{gateway_host}}/content/course/2
 Content-Type: application/json
 
 
