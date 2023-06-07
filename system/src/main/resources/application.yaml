@@ -6,6 +6,13 @@ spring:
     password: 990911
   application:
     name: system
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        namespace: dev
+        group: xuecheng-project
+
 
 server:
   servlet:
