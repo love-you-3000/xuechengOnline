@@ -2,6 +2,7 @@ package com.xuecheng.content.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.xuecheng.base.exception.XuechengException;
 import com.xuecheng.content.dto.TeachplanDto;
 import com.xuecheng.content.entity.Teachplan;
 import com.xuecheng.content.entity.TeachplanMedia;
@@ -13,6 +14,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -57,9 +59,9 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
                     mediaLambdaQueryWrapper.eq(TeachplanMedia::getTeachplanId, dto1.getId());
                     dto1.setTeachplanMedia(mediaMapper.selectOne(mediaLambdaQueryWrapper));
                     return dto1;
-                }).collect(Collectors.toList()));
+                }).sorted(Comparator.comparingInt(Teachplan::getOrderby)).collect(Collectors.toList()));
                 return dto;
-            })).collect(Collectors.toList());
+            })).sorted(Comparator.comparingInt(Teachplan::getOrderby)).collect(Collectors.toList());
         }
         return null;
     }
@@ -76,5 +78,32 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
             teachplanMapper.insert(teachplan);
         }
         teachplanMapper.updateById(teachplan);
+    }
+
+    @Override
+    public void move(Long teachPlanId, boolean up) {
+        Teachplan teachplan = teachplanMapper.selectById(teachPlanId);
+        if (teachplan == null) throw new XuechengException("操作失败！");
+        // 下移大章节
+        // 获取大章节总数
+        LambdaQueryWrapper<Teachplan> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(Teachplan::getParentid, teachplan.getParentid());
+        wrapper.eq(Teachplan::getCourseId, teachplan.getCourseId());
+        Integer count = teachplanMapper.selectCount(wrapper);
+        // 如果当前序号等于总数，说明已经到底，无需下移
+        //
+        // 否则，和比自己序号小1的课程交换排序大小
+        if (up && teachplan.getOrderby() > 1 || !up && teachplan.getOrderby() < count) {
+
+            teachplan.setOrderby(up ? teachplan.getOrderby() - 1 : teachplan.getOrderby() + 1);
+            wrapper = new LambdaQueryWrapper<>();
+            wrapper.eq(Teachplan::getParentid, teachplan.getParentid());
+            wrapper.eq(Teachplan::getCourseId, teachplan.getCourseId());
+            wrapper.eq(Teachplan::getOrderby, teachplan.getOrderby());
+            Teachplan temp = teachplanMapper.selectOne(wrapper);
+            temp.setOrderby(up ? teachplan.getOrderby() + 1 : teachplan.getOrderby() - 1);
+            teachplanMapper.updateById(teachplan);
+            teachplanMapper.updateById(temp);
+        }
     }
 }

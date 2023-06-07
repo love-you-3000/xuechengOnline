@@ -58,4 +58,5 @@ public class CourseBaseController {
         return courseBaseService.updateCourseBase(companyId, editCourseDto);
     }
 
+
 }

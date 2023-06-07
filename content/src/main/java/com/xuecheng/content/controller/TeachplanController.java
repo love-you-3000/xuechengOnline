@@ -41,4 +41,17 @@ public class TeachplanController {
         teachplanService.saveTeachplan(teachplan);
     }
 
+    @ApiOperation("下移课程计划")
+    @PostMapping("/teachplan/movedown/{teachPlanId}")
+    public void  moveDown(@PathVariable Long teachPlanId)
+    {
+        teachplanService.move(teachPlanId,false);
+    }
+
+    @ApiOperation("上移课程计划")
+    @PostMapping("/teachplan/moveup/{teachPlanId}")
+    public void  moveUp(@PathVariable Long teachPlanId)
+    {
+        teachplanService.move(teachPlanId,true);
+    }
 }
