@@ -3,6 +3,7 @@ package com.xuecheng.media.service;
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
 import com.xuecheng.media.dto.QueryMediaParamsDto;
+import com.xuecheng.media.dto.UploadFileResultDto;
 import com.xuecheng.media.entity.MediaFiles;
 
 /**
@@ -21,7 +22,8 @@ public interface MediaFileService {
   * @author Mr.M
   * @date 2022/9/10 8:57
  */
- public PageResult<MediaFiles> queryMediaFiels(Long companyId, PageParams pageParams, QueryMediaParamsDto queryMediaParamsDto);
+ PageResult<MediaFiles> queryMediaFiles(Long companyId, PageParams pageParams, QueryMediaParamsDto  queryMediaParamsDto);
 
+ UploadFileResultDto uploadFile(Long companyId, MediaFiles mediaFiles, String localFilePath);
 
 }
