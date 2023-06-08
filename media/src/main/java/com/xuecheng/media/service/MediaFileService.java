@@ -26,4 +26,5 @@ public interface MediaFileService {
 
  UploadFileResultDto uploadFile(Long companyId, MediaFiles mediaFiles, String localFilePath);
 
+ void addMediaFilesToDb(Long companyId, MediaFiles mediaFiles, String fileMd5, String uploadPath);
 }

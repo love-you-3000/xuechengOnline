@@ -39,7 +39,7 @@ public class MediaFilesController {
     }
 
     @ApiOperation("上传文件")
-    @RequestMapping(value = "/upload/coursefile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(value = "/upload/coursefile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public UploadFileResultDto upload(@RequestPart("filedata") MultipartFile upload) throws IOException {
         // 返回类型不直接使用MediaFiles是为了程序的可拓展性，如果之后前端要求返回更多字段方便拓展
         Long companyId = 1232141425L;
@@ -47,7 +47,7 @@ public class MediaFilesController {
         mediaFiles.setFileSize(upload.getSize());
         mediaFiles.setFileType("001001");
         mediaFiles.setFilename(upload.getOriginalFilename());
-        File tempFile = File.createTempFile("minio", "temp");
+        File tempFile = File.createTempFile("minio", ".temp");
         upload.transferTo(tempFile);
         String absolutePath = tempFile.getAbsolutePath();
         UploadFileResultDto dto = mediaFileService.uploadFile(companyId, mediaFiles, absolutePath);

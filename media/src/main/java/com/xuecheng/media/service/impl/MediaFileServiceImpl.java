@@ -23,6 +23,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -55,6 +56,10 @@ public class MediaFileServiceImpl implements MediaFileService {
     @Value("${minio.bucket.videoFiles}")
     String videoBucket;
 
+    @Autowired
+    MediaFileService selfProxy;
+
+
     @Override
     public PageResult<MediaFiles> queryMediaFiles(Long companyId, PageParams pageParams, QueryMediaParamsDto queryMediaParamsDto) {
 
@@ -77,15 +82,31 @@ public class MediaFileServiceImpl implements MediaFileService {
 
     @Override
     public UploadFileResultDto uploadFile(Long companyId, MediaFiles mediaFiles, String localFilePath) {
+        UploadFileResultDto dto = new UploadFileResultDto();
         File file = new File(localFilePath); // 用户上传文件的本地备份
         if (!file.exists()) XuechengException.cast("文件不存在！");
         String fileMd5 = getFileMd5(file);
+        MediaFiles hasExist = mediaFilesMapper.selectById(fileMd5);
+        if (hasExist != null) {
+
+            BeanUtils.copyProperties(hasExist, dto);
+            return dto;
+        }
         String filename = mediaFiles.getFilename();
         String extension = filename.substring(filename.lastIndexOf("."));
         String uploadPath = getDefaultFoldPath() + fileMd5 + extension;
         boolean result = uploadFileToMinio(fileBucket, extension, uploadPath, localFilePath);
         if (!result)
             XuechengException.cast("上传文件失败！");
+        mediaFiles.setFileSize(file.length());
+        selfProxy.addMediaFilesToDb(companyId, mediaFiles, fileMd5, uploadPath);
+        BeanUtils.copyProperties(mediaFiles, dto);
+        return dto;
+    }
+
+    @Transactional
+    @Override
+    public void addMediaFilesToDb(Long companyId, MediaFiles mediaFiles, String fileMd5, String uploadPath) {
         mediaFiles.setId(fileMd5);
         mediaFiles.setFileId(fileMd5);
         mediaFiles.setCompanyId(companyId);
@@ -95,16 +116,12 @@ public class MediaFileServiceImpl implements MediaFileService {
         mediaFiles.setCreateDate(LocalDateTime.now());
         mediaFiles.setAuditStatus("002003");
         mediaFiles.setStatus("1");
-        mediaFiles.setFileSize(file.length());
         int insert = mediaFilesMapper.insert(mediaFiles);
         if (insert < 0) {
             log.error("保存文件信息到数据库失败,{}", mediaFiles);
             XuechengException.cast("保存文件信息失败");
         }
         log.debug("保存文件信息到数据库成功,{}", mediaFiles);
-        UploadFileResultDto dto = new UploadFileResultDto();
-        BeanUtils.copyProperties(mediaFiles, dto);
-        return dto;
     }
 
     //获取文件的md5
