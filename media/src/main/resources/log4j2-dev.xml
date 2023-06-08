@@ -65,7 +65,8 @@
 
         <logger name="org.dromara.hmily.lottery" level="WARN">
         </logger>
-
+        <logger name="com.alibaba.nacos" level="WARN">
+        </logger>
         <logger name="org.dromara.hmily.bonuspoint" level="WARN">
         </logger>
 

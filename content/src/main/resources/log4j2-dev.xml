@@ -2,7 +2,7 @@
 <Configuration monitorInterval="180" packages="">
     <properties>
         <property name="logdir">log</property>
-<!--        <property name="PATTERN">[%date{YYYY-MM-dd HH:mm:ss,SSS}] [%level] [%thread][%file:%line] - %msg%n%throwable</property>-->
+        <!--        <property name="PATTERN">[%date{YYYY-MM-dd HH:mm:ss,SSS}] [%level] [%thread][%file:%line] - %msg%n%throwable</property>-->
         <property name="PATTERN">%blue{[%date{YYYY-MM-dd HH:mm:ss,SSS}]} %green{[%-5level]} %magenta{[%-10thread]}%red{[%file:%line]} - %msg%n%throwable</property>
     </properties>
     <Appenders>
@@ -65,7 +65,8 @@
 
         <logger name="org.dromara.hmily.lottery" level="WARN">
         </logger>
-
+        <logger name="com.alibaba.nacos" level="WARN">
+        </logger>
         <logger name="org.dromara.hmily.bonuspoint" level="WARN">
         </logger>
 
