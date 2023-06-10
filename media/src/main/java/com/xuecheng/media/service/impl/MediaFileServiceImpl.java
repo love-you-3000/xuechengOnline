@@ -7,15 +7,13 @@ import com.j256.simplemagic.ContentInfoUtil;
 import com.xuecheng.base.exception.XuechengException;
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
+import com.xuecheng.base.model.RestResponse;
 import com.xuecheng.media.dto.QueryMediaParamsDto;
 import com.xuecheng.media.dto.UploadFileResultDto;
 import com.xuecheng.media.entity.MediaFiles;
 import com.xuecheng.media.mapper.MediaFilesMapper;
 import com.xuecheng.media.service.MediaFileService;
-import io.minio.BucketExistsArgs;
-import io.minio.MakeBucketArgs;
-import io.minio.MinioClient;
-import io.minio.UploadObjectArgs;
+import io.minio.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.BeanUtils;
@@ -124,6 +122,53 @@ public class MediaFileServiceImpl implements MediaFileService {
         log.debug("保存文件信息到数据库成功,{}", mediaFiles);
     }
 
+    @Override
+    public RestResponse<Boolean> checkFile(String fileMd5) {
+        MediaFiles mediaFiles = mediaFilesMapper.selectById(fileMd5);
+        if (mediaFiles == null) return RestResponse.success(false);
+        String bucket = mediaFiles.getBucket();
+        String filePath = mediaFiles.getFilePath();
+        try {
+            GetObjectResponse stream = minioClient.getObject(GetObjectArgs.builder().bucket(bucket).object(filePath).build());
+            if (stream == null) return RestResponse.success(false);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return RestResponse.success(false);
+        }
+        return RestResponse.success(true);
+    }
+
+    @Override
+    public RestResponse<Boolean> checkChunk(String fileMd5, int chunkIndex) {
+        //得到分块文件目录
+        String chunkFileFolderPath = getChunkFileFolderPath(fileMd5);
+        //得到分块文件的路径
+        String chunkFilePath = chunkFileFolderPath + chunkIndex;
+        //文件流
+        try {
+            minioClient.statObject(
+                    StatObjectArgs.builder()
+                            .bucket(videoBucket)
+                            .object(chunkFilePath)
+                            .build());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return RestResponse.success(false);
+        }
+        //分块未存在
+        return RestResponse.success(true);
+
+    }
+
+    @Override
+    public RestResponse<Boolean> uploadchunk(String fileMd5, int chunk, String localChunkFilePath) {
+        String uploadPath = getChunkFileFolderPath(fileMd5);
+        String uploadName = uploadPath + chunk;
+        boolean b = uploadFileToMinio(videoBucket, null, uploadName, localChunkFilePath);
+        if (!b) return RestResponse.validfail(false, "上传文件失败！");
+        return RestResponse.success(true);
+    }
+
     //获取文件的md5
     private String getFileMd5(File file) {
         try (FileInputStream fileInputStream = new FileInputStream(file)) {
@@ -149,15 +194,7 @@ public class MediaFileServiceImpl implements MediaFileService {
             } else {
                 System.out.println("Bucket '" + bucket + "' already exists.");
             }
-            if (extension == null)
-                extension = "";
-            //根据扩展名取出mimeType
-            ContentInfo extensionMatch = ContentInfoUtil.findExtensionMatch(extension);
-            //通用mimeType，字节流
-            String mimeType = MediaType.APPLICATION_OCTET_STREAM_VALUE;
-            if (extensionMatch != null) {
-                mimeType = extensionMatch.getMimeType();
-            }
+            String mimeType = getMimeType(extension);
             minioClient.uploadObject(UploadObjectArgs.builder()
                     .bucket(bucket) // 确定桶
                     .object(uploadName)
@@ -170,5 +207,22 @@ public class MediaFileServiceImpl implements MediaFileService {
             log.error("上传文件出错:bucket:{}, uploadNane:{}, localName:{}, 错误信息:{}", bucket, uploadName, localName, e.getMessage());
         }
         return false;
+    }
+
+    private String getMimeType(String extension) {
+        if (extension == null)
+            extension = "";
+        //根据扩展名取出mimeType
+        ContentInfo extensionMatch = ContentInfoUtil.findExtensionMatch(extension);
+        //通用mimeType，字节流
+        String mimeType = MediaType.APPLICATION_OCTET_STREAM_VALUE;
+        if (extensionMatch != null) {
+            mimeType = extensionMatch.getMimeType();
+        }
+        return mimeType;
+    }
+
+    private String getChunkFileFolderPath(String fileMd5) {
+        return fileMd5.charAt(0) + "/" + fileMd5.charAt(1) + "/" + fileMd5 + "/chunk/";
     }
 }

@@ -36,9 +36,9 @@ public class BigFileTest {
     public void testChunk() throws IOException {
         File file = new File("D:\\Study\\JAVA\\简历项目\\xuecheng\\upload\\chunk.mp4");
         String chunkFilePath = "D:\\Study\\JAVA\\简历项目\\xuecheng\\upload\\chunk\\";
-        int chunkSize = 1024 * 1024 * 5;
+        int chunkSize = 1;
         int chunkNum = (int) ((file.length() + chunkSize - 1)/chunkSize);
-        byte[] buffer = new byte[1024];
+        byte[] buffer = new byte[1];
         RandomAccessFile raf_r = new RandomAccessFile(file, "r");
         for (int i=0;i<chunkNum;i++){
             File chunkFile = new File(chunkFilePath + i);
@@ -61,7 +61,7 @@ public class BigFileTest {
         File chunkFilePath = new File("D:\\Study\\JAVA\\简历项目\\xuecheng\\upload\\chunk\\");
         File sourceFile = new File("D:\\Study\\JAVA\\简历项目\\xuecheng\\upload\\chunk.mp4");
         File mergeFile = new File("D:\\Study\\JAVA\\简历项目\\xuecheng\\upload\\merge.mp4");
-        byte[] buffer = new byte[1024];
+        byte[] buffer = new byte[1];
         int len = 0;
         FileOutputStream outputStream = new FileOutputStream(mergeFile);
         File[] files = chunkFilePath.listFiles();
