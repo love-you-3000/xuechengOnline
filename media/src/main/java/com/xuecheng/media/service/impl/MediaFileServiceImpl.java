@@ -102,18 +102,18 @@ public class MediaFileServiceImpl implements MediaFileService {
         if (!result)
             XuechengException.cast("上传文件失败！");
         mediaFiles.setFileSize(file.length());
-        selfProxy.addMediaFilesToDb(companyId, mediaFiles, fileMd5, uploadPath);
+        selfProxy.addMediaFilesToDb(companyId, mediaFiles, videoBucket, fileMd5, uploadPath);
         BeanUtils.copyProperties(mediaFiles, dto);
         return dto;
     }
 
     @Transactional
     @Override
-    public void addMediaFilesToDb(Long companyId, MediaFiles mediaFiles, String fileMd5, String uploadPath) {
+    public void addMediaFilesToDb(Long companyId, MediaFiles mediaFiles, String bucket, String fileMd5, String uploadPath) {
         mediaFiles.setId(fileMd5);
         mediaFiles.setFileId(fileMd5);
         mediaFiles.setCompanyId(companyId);
-        mediaFiles.setBucket(fileBucket);
+        mediaFiles.setBucket(bucket);
         mediaFiles.setUrl("/" + mediaFiles.getBucket() + "/" + uploadPath);
         mediaFiles.setFilePath(uploadPath);
         mediaFiles.setCreateDate(LocalDateTime.now());
@@ -145,6 +145,8 @@ public class MediaFileServiceImpl implements MediaFileService {
 
     @Override
     public RestResponse<Boolean> checkChunk(String fileMd5, int chunkIndex) {
+        RestResponse<Boolean> booleanRestResponse = checkFile(fileMd5);
+        if (booleanRestResponse.getResult()) return booleanRestResponse;
         //得到分块文件目录
         String chunkFileFolderPath = getChunkFileFolderPath(fileMd5);
         //得到分块文件的路径
@@ -176,7 +178,9 @@ public class MediaFileServiceImpl implements MediaFileService {
 
     @Override
     public RestResponse<Boolean> mergeChunks(Long companyId, String fileMd5, int chunkTotal, MediaFiles mediaFiles) {
-
+        // 避免重复上传
+        RestResponse<Boolean> booleanRestResponse = checkFile(fileMd5);
+        if (booleanRestResponse.getResult()) return booleanRestResponse;
         // 找到分块文件，用minio API合并
         String chunkPath = getChunkFileFolderPath(fileMd5);
         List<ComposeSource> sourceList = Stream.iterate(0, i -> i + 1)
@@ -217,7 +221,7 @@ public class MediaFileServiceImpl implements MediaFileService {
         mediaFiles.setTags("视频文件");
         mediaFiles.setFileType("001002");
         // 文件入库
-        selfProxy.addMediaFilesToDb(companyId, mediaFiles, fileMd5, uploadPath);
+        selfProxy.addMediaFilesToDb(companyId, mediaFiles, videoBucket, fileMd5, uploadPath);
         //todo 删除分块
         clearChunkFiles(chunkPath, chunkTotal);
         return RestResponse.success(true);
