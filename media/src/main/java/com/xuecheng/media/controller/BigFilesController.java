@@ -1,6 +1,7 @@
 package com.xuecheng.media.controller;
 
 import com.xuecheng.base.model.RestResponse;
+import com.xuecheng.media.entity.MediaFiles;
 import com.xuecheng.media.service.MediaFileService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -56,10 +57,14 @@ public class BigFilesController {
 
     @ApiOperation(value = "合并文件")
     @PostMapping("/upload/mergechunks")
-    public RestResponse mergechunks(@RequestParam("fileMd5") String fileMd5,
+    public RestResponse mergeChunks(@RequestParam("fileMd5") String fileMd5,
                                     @RequestParam("fileName") String fileName,
                                     @RequestParam("chunkTotal") int chunkTotal) throws Exception {
-        return null;
+        Long companyId = 1232141425L;
+        MediaFiles mediaFiles = new MediaFiles();
+        mediaFiles.setFilename(fileName);
+        mediaFiles.setCompanyId(companyId);
+        return mediaFileService.mergeChunks(companyId,fileMd5, chunkTotal,mediaFiles);
 
     }
 

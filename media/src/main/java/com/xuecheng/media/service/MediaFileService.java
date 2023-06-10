@@ -8,31 +8,32 @@ import com.xuecheng.media.dto.UploadFileResultDto;
 import com.xuecheng.media.entity.MediaFiles;
 
 /**
- * @description 媒资文件管理业务类
  * @author Mr.M
- * @date 2022/9/10 8:55
  * @version 1.0
+ * @description 媒资文件管理业务类
+ * @date 2022/9/10 8:55
  */
 public interface MediaFileService {
 
- /**
-  * @description 媒资文件查询方法
-  * @param pageParams 分页参数
-  * @param queryMediaParamsDto 查询条件
-  * @return com.xuecheng.base.model.PageResult<com.xuecheng.media.model.po.MediaFiles>
-  * @author Mr.M
-  * @date 2022/9/10 8:57
- */
- PageResult<MediaFiles> queryMediaFiles(Long companyId, PageParams pageParams, QueryMediaParamsDto  queryMediaParamsDto);
+    /**
+     * @param pageParams          分页参数
+     * @param queryMediaParamsDto 查询条件
+     * @return com.xuecheng.base.model.PageResult<com.xuecheng.media.model.po.MediaFiles>
+     * @description 媒资文件查询方法
+     * @author Mr.M
+     * @date 2022/9/10 8:57
+     */
+    PageResult<MediaFiles> queryMediaFiles(Long companyId, PageParams pageParams, QueryMediaParamsDto queryMediaParamsDto);
 
- UploadFileResultDto uploadFile(Long companyId, MediaFiles mediaFiles, String localFilePath);
+    UploadFileResultDto uploadFile(Long companyId, MediaFiles mediaFiles, String localFilePath);
 
- void addMediaFilesToDb(Long companyId, MediaFiles mediaFiles, String fileMd5, String uploadPath);
+    void addMediaFilesToDb(Long companyId, MediaFiles mediaFiles, String fileMd5, String uploadPath);
 
- RestResponse<Boolean> checkFile(String fileMd5);
+    RestResponse<Boolean> checkFile(String fileMd5);
 
+    RestResponse<Boolean> checkChunk(String fileMd5, int chunk);
 
- RestResponse<Boolean> checkChunk(String fileMd5, int chunk);
+    RestResponse<Boolean> uploadchunk(String fileMd5, int chunk, String localChunkFilePath);
 
- RestResponse<Boolean> uploadchunk(String fileMd5, int chunk, String localChunkFilePath);
+    RestResponse<Boolean> mergeChunks(Long companyId, String fileMd5, int chunkTotal, MediaFiles mediaFiles);
 }
