@@ -11,7 +11,9 @@ import com.xuecheng.base.model.RestResponse;
 import com.xuecheng.media.dto.QueryMediaParamsDto;
 import com.xuecheng.media.dto.UploadFileResultDto;
 import com.xuecheng.media.entity.MediaFiles;
+import com.xuecheng.media.entity.MediaProcess;
 import com.xuecheng.media.mapper.MediaFilesMapper;
+import com.xuecheng.media.mapper.MediaProcessMapper;
 import com.xuecheng.media.service.MediaFileService;
 import io.minio.*;
 import io.minio.messages.DeleteError;
@@ -49,6 +51,9 @@ public class MediaFileServiceImpl implements MediaFileService {
     MediaFilesMapper mediaFilesMapper;
 
     @Autowired
+    MediaProcessMapper mediaProcessMapper;
+
+    @Autowired
     MinioClient minioClient;
 
     // 存储普通文件
@@ -80,7 +85,6 @@ public class MediaFileServiceImpl implements MediaFileService {
         // 构建结果集
         PageResult<MediaFiles> mediaListResult = new PageResult<>(list, total, pageParams.getPageNo(), pageParams.getPageSize());
         return mediaListResult;
-
     }
 
     @Override
@@ -125,6 +129,29 @@ public class MediaFileServiceImpl implements MediaFileService {
             XuechengException.cast("保存文件信息失败");
         }
         log.debug("保存文件信息到数据库成功,{}", mediaFiles);
+        addWaitingTask(mediaFiles);
+        // 视频转码需要和文件上传成功同步，也就是要保持事务
+        // 判断该文件是否需要处理
+        // 如果需要处理，向MediaProcess中插入数据
+
+    }
+
+    // 将文件加入待处理数据表
+    private void addWaitingTask(MediaFiles mediaFiles) {
+        // 判断该文件是否需要处理
+        // 如果需要处理，向MediaProcess中插入数据
+        String filename = mediaFiles.getFilename();
+        String extension = filename.substring(filename.lastIndexOf("."));
+        String mimeType = getMimeType(extension);
+        if(mimeType.equals("video/x-msvideo")){
+            MediaProcess mediaProcess = new MediaProcess();
+            BeanUtils.copyProperties(mediaFiles, mediaProcess);
+            mediaProcess.setCreateDate(LocalDateTime.now());
+            mediaProcess.setStatus("1"); // 1为待处理
+            mediaProcess.setFailCount(0);
+            mediaProcess.setUrl(null);
+            mediaProcessMapper.insert(mediaProcess);
+        }
     }
 
     @Override
