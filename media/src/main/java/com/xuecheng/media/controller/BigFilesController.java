@@ -48,7 +48,7 @@ public class BigFilesController {
         File tempFile = File.createTempFile("minio", ".temp");
         file.transferTo(tempFile);
         String absolutePath = tempFile.getAbsolutePath();
-        RestResponse<Boolean> response = mediaFileService.uploadchunk(fileMd5, chunk, absolutePath);
+        RestResponse<Boolean> response = mediaFileService.uploadChunk(fileMd5, chunk, absolutePath);
         File f = new File(absolutePath);
         if (f.delete()) System.out.println("删除分块" + chunk + "成功");
         else System.out.println("删除分块" + chunk + "删除失败");

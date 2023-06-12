@@ -14,4 +14,7 @@ import java.util.List;
 public interface MediaProcessService {
     List<MediaProcess> selectByShardIndex(int shardTotal, int shardIndex, int count);
 
+    void saveProcessFinishStatus(Long taskId,String status,String fileId,String url,String errorMsg);
+
+    boolean startTask(Long id);
 }

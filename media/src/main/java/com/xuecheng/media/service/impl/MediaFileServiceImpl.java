@@ -195,7 +195,7 @@ public class MediaFileServiceImpl implements MediaFileService {
     }
 
     @Override
-    public RestResponse<Boolean> uploadchunk(String fileMd5, int chunk, String localChunkFilePath) {
+    public RestResponse<Boolean> uploadChunk(String fileMd5, int chunk, String localChunkFilePath) {
         String uploadPath = getChunkFileFolderPath(fileMd5);
         String uploadName = uploadPath + chunk;
         boolean b = uploadFileToMinio(videoBucket, null, uploadName, localChunkFilePath);
@@ -295,6 +295,7 @@ public class MediaFileServiceImpl implements MediaFileService {
     }
 
     // 上传文件到MINIO
+    @Override
     public boolean uploadFileToMinio(String bucket, String extension, String uploadName, String localName) {
         try {
             boolean found =
@@ -343,6 +344,7 @@ public class MediaFileServiceImpl implements MediaFileService {
      * @param objectName 对象名称
      * @return 下载后的文件
      */
+    @Override
     public File downloadFileFromMinIO(String bucket, String objectName) {
         //临时文件
         File minioFile = null;
