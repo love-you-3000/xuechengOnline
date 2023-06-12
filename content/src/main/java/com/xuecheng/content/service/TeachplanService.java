@@ -1,5 +1,6 @@
 package com.xuecheng.content.service;
 
+import com.xuecheng.content.dto.BindTeachplanMediaDto;
 import com.xuecheng.content.dto.TeachplanDto;
 import com.xuecheng.content.entity.Teachplan;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -23,5 +24,7 @@ public interface TeachplanService extends IService<Teachplan> {
     void move(Long teachPlanId, boolean up);
 
     void deleteTeachPlan(Long teachPlanId);
+
+    void associationMedia(BindTeachplanMediaDto bindTeachplanMediaDto);
 }
 

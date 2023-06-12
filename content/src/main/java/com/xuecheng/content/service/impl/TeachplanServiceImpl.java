@@ -3,6 +3,7 @@ package com.xuecheng.content.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xuecheng.base.exception.XuechengException;
+import com.xuecheng.content.dto.BindTeachplanMediaDto;
 import com.xuecheng.content.dto.TeachplanDto;
 import com.xuecheng.content.entity.Teachplan;
 import com.xuecheng.content.entity.TeachplanMedia;
@@ -15,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -35,6 +37,9 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
 
     @Autowired
     TeachplanMediaMapper mediaMapper;
+
+    @Autowired
+    TeachplanMediaMapper teachplanMediaMapper;
 
     @Override
     public List<TeachplanDto> getTreeNodes(Long courseId) {
@@ -133,6 +138,28 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
             mediaMapper.delete(mediaWrapper);
         }
         changeOrderBy(teachplan.getCourseId(), teachplan.getParentid(), teachplan.getOrderby());
+    }
+
+    @Override
+    public void associationMedia(BindTeachplanMediaDto bindTeachplanMediaDto) {
+        Long teachplanId = bindTeachplanMediaDto.getTeachplanId();
+        Teachplan teachplan = teachplanMapper.selectById(teachplanId);
+        if (teachplan == null) {
+            XuechengException.cast("课程计划不存在！");
+        }
+        if (teachplan.getGrade() == null || teachplan.getGrade() != 2) {
+            XuechengException.cast("只允许第二级教学计划绑定媒资文件！");
+        }
+        Long courseId = teachplan.getCourseId();
+        // 先删除原有的绑定关系
+        teachplanMediaMapper.delete(new LambdaQueryWrapper<TeachplanMedia>().eq(TeachplanMedia::getTeachplanId, teachplanId));
+        TeachplanMedia teachplanMedia = new TeachplanMedia();
+        teachplanMedia.setTeachplanId(teachplanId);
+        teachplanMedia.setMediaId(bindTeachplanMediaDto.getMediaId());
+        teachplanMedia.setMediaFilename(bindTeachplanMediaDto.getFileName());
+        teachplanMedia.setCourseId(courseId);
+        teachplanMedia.setCreateDate(LocalDateTime.now());
+        teachplanMediaMapper.insert(teachplanMedia);
     }
 
     private void changeOrderBy(Long courseId, Long parentId, Integer orderBy) {
