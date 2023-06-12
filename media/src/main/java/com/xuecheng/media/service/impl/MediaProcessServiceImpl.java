@@ -60,21 +60,19 @@ public class MediaProcessServiceImpl implements MediaProcessService {
                 MediaFiles mediaFiles = mediaFilesMapper.selectById(fileId);
                 mediaFiles.setUrl(url);
                 mediaFilesMapper.updateById(mediaFiles);
-
                 mediaProcess.setStatus("2");
                 mediaProcess.setUrl(url);
                 mediaProcess.setFinishDate(LocalDateTime.now());
-
                 MediaProcessHistory mediaProcessHistory = new MediaProcessHistory();
                 BeanUtils.copyProperties(mediaProcess, mediaProcessHistory);
-                mediaProcessHistoryMapper.updateById(mediaProcessHistory);
-                mediaProcessHistoryMapper.deleteById(mediaProcess);
+                mediaProcessHistoryMapper.insert(mediaProcessHistory);
+                mediaProcessMapper.deleteById(mediaProcess);
             }
         }
     }
 
     @Override
     public boolean startTask(Long id) {
-        return mediaProcessMapper.startTask(id)>0;
+        return mediaProcessMapper.startTask(id) > 0;
     }
 }

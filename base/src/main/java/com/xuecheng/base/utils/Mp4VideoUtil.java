@@ -10,14 +10,12 @@ public class Mp4VideoUtil extends VideoUtil {
     String ffmpeg_path;
     // 源文件地址
     String video_path;
-    String mp4_name;
     String mp4folder_path;
 
-    public Mp4VideoUtil(String ffmpeg_path, String video_path, String mp4_name, String mp4folder_path) {
+    public Mp4VideoUtil(String ffmpeg_path, String video_path, String mp4folder_path) {
         super(ffmpeg_path);
         this.ffmpeg_path = ffmpeg_path;
         this.video_path = video_path;
-        this.mp4_name = mp4_name;
         this.mp4folder_path = mp4folder_path;
     }
 
@@ -37,7 +35,7 @@ public class Mp4VideoUtil extends VideoUtil {
      */
     public String generateMp4() {
         //清除已生成的mp4
-        clear_mp4(mp4folder_path + mp4_name);
+        clear_mp4(mp4folder_path);
         /*
         ffmpeg.exe -i  lucene.avi -c:v libx264 -s 1280x720 -pix_fmt yuv420p -b:a 63k -b:v 753k -r 18 .\lucene.mp4
          */
@@ -58,7 +56,7 @@ public class Mp4VideoUtil extends VideoUtil {
         commend.add("753k");
         commend.add("-r");
         commend.add("18");
-        commend.add(mp4folder_path + mp4_name);
+        commend.add(mp4folder_path);
         String outstring = null;
         try {
             ProcessBuilder builder = new ProcessBuilder();
@@ -73,7 +71,7 @@ public class Mp4VideoUtil extends VideoUtil {
             ex.printStackTrace();
 
         }
-        Boolean check_video_time = this.check_video_time(video_path, mp4folder_path + mp4_name);
+        Boolean check_video_time = this.check_video_time(video_path, mp4folder_path);
         if (!check_video_time) {
             return outstring;
         } else {
@@ -86,12 +84,10 @@ public class Mp4VideoUtil extends VideoUtil {
         String ffmpeg_path = "D:\\Study\\JAVA\\资料\\学成在线项目—资料\\day01 项目介绍&环境搭建\\资料\\常用软件工具\\ffmpeg\\ffmpeg.exe";//ffmpeg的安装位置
         //源avi视频的路径
         String video_path = "D:\\Study\\JAVA\\简历项目\\xuecheng\\upload\\test.avi";
-        //转换后mp4文件的名称
-        String mp4_name = "test.mp4";
         //转换后mp4文件的路径
-        String mp4_path = "D:\\Study\\JAVA\\简历项目\\xuecheng\\upload\\";
+        String mp4_path = "D:\\Study\\JAVA\\简历项目\\xuecheng\\upload\\test.mp4";
         //创建工具类对象
-        Mp4VideoUtil videoUtil = new Mp4VideoUtil(ffmpeg_path, video_path, mp4_name, mp4_path);
+        Mp4VideoUtil videoUtil = new Mp4VideoUtil(ffmpeg_path, video_path, mp4_path);
         //开始视频转换，成功将返回success
         String s = videoUtil.generateMp4();
         System.out.println(s);

@@ -1,0 +1,1136 @@
+[34m[2023-06-12 11:14:57,472][m [32m[INFO ][m [35m[main      ][m[31m[SpringApplication.java:655][m - The following profiles are active: dev
+[34m[2023-06-12 11:14:57,472][m [32m[INFO ][m [35m[main      ][m[31m[SpringApplication.java:655][m - The following profiles are active: dev
+[34m[2023-06-12 11:14:58,068][m [32m[DEBUG][m [35m[main      ][m[31m[LogFactory.java:105][m - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+[34m[2023-06-12 11:14:58,068][m [32m[DEBUG][m [35m[main      ][m[31m[LogFactory.java:105][m - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+[34m[2023-06-12 11:14:58,133][m [32m[INFO ][m [35m[main      ][m[31m[GenericScope.java:295][m - BeanFactory id=9a99e6d5-27be-3e3d-b340-01ed827d66fc
+[34m[2023-06-12 11:14:58,133][m [32m[INFO ][m [35m[main      ][m[31m[GenericScope.java:295][m - BeanFactory id=9a99e6d5-27be-3e3d-b340-01ed827d66fc
+[34m[2023-06-12 11:14:58,411][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:946][m - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+[34m[2023-06-12 11:14:58,411][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:946][m - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+[34m[2023-06-12 11:14:58,506][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@43c0c13a'
+[34m[2023-06-12 11:14:58,506][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@43c0c13a'
+[34m[2023-06-12 11:14:58,651][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.insert
+[34m[2023-06-12 11:14:58,651][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.insert
+[34m[2023-06-12 11:14:58,658][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.delete
+[34m[2023-06-12 11:14:58,658][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.delete
+[34m[2023-06-12 11:14:58,662][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.deleteByMap
+[34m[2023-06-12 11:14:58,662][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.deleteByMap
+[34m[2023-06-12 11:14:58,708][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.deleteById
+[34m[2023-06-12 11:14:58,708][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.deleteById
+[34m[2023-06-12 11:14:58,711][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.deleteBatchIds
+[34m[2023-06-12 11:14:58,711][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.deleteBatchIds
+[34m[2023-06-12 11:14:58,715][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.update
+[34m[2023-06-12 11:14:58,715][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.update
+[34m[2023-06-12 11:14:58,718][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.updateById
+[34m[2023-06-12 11:14:58,718][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.updateById
+[34m[2023-06-12 11:14:58,719][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectById
+[34m[2023-06-12 11:14:58,719][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectById
+[34m[2023-06-12 11:14:58,722][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectBatchIds
+[34m[2023-06-12 11:14:58,722][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectBatchIds
+[34m[2023-06-12 11:14:58,724][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectByMap
+[34m[2023-06-12 11:14:58,724][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectByMap
+[34m[2023-06-12 11:14:58,726][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectOne
+[34m[2023-06-12 11:14:58,726][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectOne
+[34m[2023-06-12 11:14:58,729][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectCount
+[34m[2023-06-12 11:14:58,729][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectCount
+[34m[2023-06-12 11:14:58,732][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectMaps
+[34m[2023-06-12 11:14:58,732][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectMaps
+[34m[2023-06-12 11:14:58,734][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectMapsPage
+[34m[2023-06-12 11:14:58,734][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectMapsPage
+[34m[2023-06-12 11:14:58,737][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectObjs
+[34m[2023-06-12 11:14:58,737][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectObjs
+[34m[2023-06-12 11:14:58,740][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectList
+[34m[2023-06-12 11:14:58,740][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectList
+[34m[2023-06-12 11:14:58,742][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectPage
+[34m[2023-06-12 11:14:58,742][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectPage
+[34m[2023-06-12 11:14:58,744][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MediaFilesMapper.xml]'
+[34m[2023-06-12 11:14:58,744][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MediaFilesMapper.xml]'
+[34m[2023-06-12 11:14:58,760][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.insert
+[34m[2023-06-12 11:14:58,760][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.insert
+[34m[2023-06-12 11:14:58,762][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.delete
+[34m[2023-06-12 11:14:58,762][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.delete
+[34m[2023-06-12 11:14:58,764][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.deleteByMap
+[34m[2023-06-12 11:14:58,764][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.deleteByMap
+[34m[2023-06-12 11:14:58,765][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.deleteById
+[34m[2023-06-12 11:14:58,765][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.deleteById
+[34m[2023-06-12 11:14:58,767][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.deleteBatchIds
+[34m[2023-06-12 11:14:58,767][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.deleteBatchIds
+[34m[2023-06-12 11:14:58,770][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.update
+[34m[2023-06-12 11:14:58,770][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.update
+[34m[2023-06-12 11:14:58,772][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.updateById
+[34m[2023-06-12 11:14:58,772][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.updateById
+[34m[2023-06-12 11:14:58,773][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectById
+[34m[2023-06-12 11:14:58,773][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectById
+[34m[2023-06-12 11:14:58,775][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectBatchIds
+[34m[2023-06-12 11:14:58,775][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectBatchIds
+[34m[2023-06-12 11:14:58,777][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectByMap
+[34m[2023-06-12 11:14:58,777][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectByMap
+[34m[2023-06-12 11:14:58,779][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectOne
+[34m[2023-06-12 11:14:58,779][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectOne
+[34m[2023-06-12 11:14:58,781][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectCount
+[34m[2023-06-12 11:14:58,781][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectCount
+[34m[2023-06-12 11:14:58,783][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectMaps
+[34m[2023-06-12 11:14:58,783][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectMaps
+[34m[2023-06-12 11:14:58,785][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectMapsPage
+[34m[2023-06-12 11:14:58,785][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectMapsPage
+[34m[2023-06-12 11:14:58,787][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectObjs
+[34m[2023-06-12 11:14:58,787][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectObjs
+[34m[2023-06-12 11:14:58,789][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectList
+[34m[2023-06-12 11:14:58,789][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectList
+[34m[2023-06-12 11:14:58,791][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectPage
+[34m[2023-06-12 11:14:58,791][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectPage
+[34m[2023-06-12 11:14:58,791][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MediaProcessHistoryMapper.xml]'
+[34m[2023-06-12 11:14:58,791][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MediaProcessHistoryMapper.xml]'
+[34m[2023-06-12 11:14:58,807][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectByShardIndex
+[34m[2023-06-12 11:14:58,807][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectByShardIndex
+[34m[2023-06-12 11:14:58,810][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.startTask
+[34m[2023-06-12 11:14:58,810][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.startTask
+[34m[2023-06-12 11:14:58,812][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.insert
+[34m[2023-06-12 11:14:58,812][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.insert
+[34m[2023-06-12 11:14:58,813][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.delete
+[34m[2023-06-12 11:14:58,813][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.delete
+[34m[2023-06-12 11:14:58,816][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.deleteByMap
+[34m[2023-06-12 11:14:58,816][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.deleteByMap
+[34m[2023-06-12 11:14:58,818][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.deleteById
+[34m[2023-06-12 11:14:58,818][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.deleteById
+[34m[2023-06-12 11:14:58,820][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.deleteBatchIds
+[34m[2023-06-12 11:14:58,820][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.deleteBatchIds
+[34m[2023-06-12 11:14:58,821][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.update
+[34m[2023-06-12 11:14:58,821][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.update
+[34m[2023-06-12 11:14:58,823][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.updateById
+[34m[2023-06-12 11:14:58,823][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.updateById
+[34m[2023-06-12 11:14:58,823][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectById
+[34m[2023-06-12 11:14:58,823][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectById
+[34m[2023-06-12 11:14:58,824][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectBatchIds
+[34m[2023-06-12 11:14:58,824][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectBatchIds
+[34m[2023-06-12 11:14:58,826][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectByMap
+[34m[2023-06-12 11:14:58,826][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectByMap
+[34m[2023-06-12 11:14:58,827][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectOne
+[34m[2023-06-12 11:14:58,827][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectOne
+[34m[2023-06-12 11:14:58,829][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectCount
+[34m[2023-06-12 11:14:58,829][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectCount
+[34m[2023-06-12 11:14:58,831][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectMaps
+[34m[2023-06-12 11:14:58,831][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectMaps
+[34m[2023-06-12 11:14:58,833][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectMapsPage
+[34m[2023-06-12 11:14:58,833][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectMapsPage
+[34m[2023-06-12 11:14:58,835][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectObjs
+[34m[2023-06-12 11:14:58,835][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectObjs
+[34m[2023-06-12 11:14:58,837][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectList
+[34m[2023-06-12 11:14:58,837][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectList
+[34m[2023-06-12 11:14:58,838][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectPage
+[34m[2023-06-12 11:14:58,838][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectPage
+[34m[2023-06-12 11:14:58,839][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MediaProcessMapper.xml]'
+[34m[2023-06-12 11:14:58,839][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MediaProcessMapper.xml]'
+[34m[2023-06-12 11:14:58,850][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.insert
+[34m[2023-06-12 11:14:58,850][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.insert
+[34m[2023-06-12 11:14:58,852][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.delete
+[34m[2023-06-12 11:14:58,852][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.delete
+[34m[2023-06-12 11:14:58,853][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.deleteByMap
+[34m[2023-06-12 11:14:58,853][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.deleteByMap
+[34m[2023-06-12 11:14:58,855][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.deleteById
+[34m[2023-06-12 11:14:58,855][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.deleteById
+[34m[2023-06-12 11:14:58,856][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.deleteBatchIds
+[34m[2023-06-12 11:14:58,856][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.deleteBatchIds
+[34m[2023-06-12 11:14:58,858][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.update
+[34m[2023-06-12 11:14:58,858][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.update
+[34m[2023-06-12 11:14:58,861][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.updateById
+[34m[2023-06-12 11:14:58,861][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.updateById
+[34m[2023-06-12 11:14:58,861][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectById
+[34m[2023-06-12 11:14:58,861][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectById
+[34m[2023-06-12 11:14:58,863][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectBatchIds
+[34m[2023-06-12 11:14:58,863][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectBatchIds
+[34m[2023-06-12 11:14:58,867][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectByMap
+[34m[2023-06-12 11:14:58,867][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectByMap
+[34m[2023-06-12 11:14:58,869][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectOne
+[34m[2023-06-12 11:14:58,869][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectOne
+[34m[2023-06-12 11:14:58,872][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectCount
+[34m[2023-06-12 11:14:58,872][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectCount
+[34m[2023-06-12 11:14:58,874][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectMaps
+[34m[2023-06-12 11:14:58,874][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectMaps
+[34m[2023-06-12 11:14:58,876][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectMapsPage
+[34m[2023-06-12 11:14:58,876][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectMapsPage
+[34m[2023-06-12 11:14:58,880][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectObjs
+[34m[2023-06-12 11:14:58,880][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectObjs
+[34m[2023-06-12 11:14:58,882][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectList
+[34m[2023-06-12 11:14:58,882][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectList
+[34m[2023-06-12 11:14:58,884][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectPage
+[34m[2023-06-12 11:14:58,884][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectPage
+[34m[2023-06-12 11:14:58,885][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MqMessageHistoryMapper.xml]'
+[34m[2023-06-12 11:14:58,885][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MqMessageHistoryMapper.xml]'
+[34m[2023-06-12 11:14:58,895][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.insert
+[34m[2023-06-12 11:14:58,895][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.insert
+[34m[2023-06-12 11:14:58,897][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.delete
+[34m[2023-06-12 11:14:58,897][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.delete
+[34m[2023-06-12 11:14:58,899][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.deleteByMap
+[34m[2023-06-12 11:14:58,899][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.deleteByMap
+[34m[2023-06-12 11:14:58,901][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.deleteById
+[34m[2023-06-12 11:14:58,901][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.deleteById
+[34m[2023-06-12 11:14:58,903][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.deleteBatchIds
+[34m[2023-06-12 11:14:58,903][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.deleteBatchIds
+[34m[2023-06-12 11:14:58,905][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.update
+[34m[2023-06-12 11:14:58,905][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.update
+[34m[2023-06-12 11:14:58,907][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.updateById
+[34m[2023-06-12 11:14:58,907][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.updateById
+[34m[2023-06-12 11:14:58,908][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectById
+[34m[2023-06-12 11:14:58,908][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectById
+[34m[2023-06-12 11:14:58,911][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectBatchIds
+[34m[2023-06-12 11:14:58,911][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectBatchIds
+[34m[2023-06-12 11:14:58,912][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectByMap
+[34m[2023-06-12 11:14:58,912][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectByMap
+[34m[2023-06-12 11:14:58,914][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectOne
+[34m[2023-06-12 11:14:58,914][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectOne
+[34m[2023-06-12 11:14:58,916][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectCount
+[34m[2023-06-12 11:14:58,916][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectCount
+[34m[2023-06-12 11:14:58,918][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectMaps
+[34m[2023-06-12 11:14:58,918][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectMaps
+[34m[2023-06-12 11:14:58,920][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectMapsPage
+[34m[2023-06-12 11:14:58,920][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectMapsPage
+[34m[2023-06-12 11:14:58,922][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectObjs
+[34m[2023-06-12 11:14:58,922][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectObjs
+[34m[2023-06-12 11:14:58,924][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectList
+[34m[2023-06-12 11:14:58,924][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectList
+[34m[2023-06-12 11:14:58,926][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectPage
+[34m[2023-06-12 11:14:58,926][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectPage
+[34m[2023-06-12 11:14:58,927][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MqMessageMapper.xml]'
+[34m[2023-06-12 11:14:58,927][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MqMessageMapper.xml]'
+[34m[2023-06-12 11:14:59,056][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobConfig.java:46][m - >>>>>>>>>>> xxl-job config init.
+[34m[2023-06-12 11:14:59,056][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobConfig.java:46][m - >>>>>>>>>>> xxl-job config init.
+[34m[2023-06-12 11:14:59,272][m [32m[WARN ][m [35m[main      ][m[31m[URLConfigurationSource.java:121][m - No URLs will be polled as dynamic configuration sources.
+[34m[2023-06-12 11:14:59,272][m [32m[WARN ][m [35m[main      ][m[31m[URLConfigurationSource.java:121][m - No URLs will be polled as dynamic configuration sources.
+[34m[2023-06-12 11:14:59,272][m [32m[INFO ][m [35m[main      ][m[31m[URLConfigurationSource.java:122][m - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[34m[2023-06-12 11:14:59,272][m [32m[INFO ][m [35m[main      ][m[31m[URLConfigurationSource.java:122][m - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[34m[2023-06-12 11:14:59,278][m [32m[WARN ][m [35m[main      ][m[31m[URLConfigurationSource.java:121][m - No URLs will be polled as dynamic configuration sources.
+[34m[2023-06-12 11:14:59,278][m [32m[WARN ][m [35m[main      ][m[31m[URLConfigurationSource.java:121][m - No URLs will be polled as dynamic configuration sources.
+[34m[2023-06-12 11:14:59,278][m [32m[INFO ][m [35m[main      ][m[31m[URLConfigurationSource.java:122][m - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[34m[2023-06-12 11:14:59,278][m [32m[INFO ][m [35m[main      ][m[31m[URLConfigurationSource.java:122][m - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[34m[2023-06-12 11:14:59,317][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceBundleMessageInterpolator.java:172][m - Loaded expression factory via original TCCL
+[34m[2023-06-12 11:14:59,317][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceBundleMessageInterpolator.java:172][m - Loaded expression factory via original TCCL
+[34m[2023-06-12 11:14:59,326][m [32m[DEBUG][m [35m[main      ][m[31m[AbstractConfigurationImpl.java:171][m - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+[34m[2023-06-12 11:14:59,326][m [32m[DEBUG][m [35m[main      ][m[31m[AbstractConfigurationImpl.java:171][m - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+[34m[2023-06-12 11:14:59,328][m [32m[DEBUG][m [35m[main      ][m[31m[AbstractConfigurationImpl.java:203][m - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+[34m[2023-06-12 11:14:59,328][m [32m[DEBUG][m [35m[main      ][m[31m[AbstractConfigurationImpl.java:203][m - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+[34m[2023-06-12 11:14:59,329][m [32m[DEBUG][m [35m[main      ][m[31m[AbstractConfigurationImpl.java:217][m - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+[34m[2023-06-12 11:14:59,329][m [32m[DEBUG][m [35m[main      ][m[31m[AbstractConfigurationImpl.java:217][m - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+[34m[2023-06-12 11:14:59,333][m [32m[DEBUG][m [35m[main      ][m[31m[ValidationXmlParser.java:120][m - Trying to load META-INF/validation.xml for XML based Validator configuration.
+[34m[2023-06-12 11:14:59,333][m [32m[DEBUG][m [35m[main      ][m[31m[ValidationXmlParser.java:120][m - Trying to load META-INF/validation.xml for XML based Validator configuration.
+[34m[2023-06-12 11:14:59,333][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceLoaderHelper.java:53][m - Trying to load META-INF/validation.xml via user class loader
+[34m[2023-06-12 11:14:59,333][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceLoaderHelper.java:53][m - Trying to load META-INF/validation.xml via user class loader
+[34m[2023-06-12 11:14:59,334][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceLoaderHelper.java:60][m - Trying to load META-INF/validation.xml via TCCL
+[34m[2023-06-12 11:14:59,334][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceLoaderHelper.java:60][m - Trying to load META-INF/validation.xml via TCCL
+[34m[2023-06-12 11:14:59,334][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceLoaderHelper.java:66][m - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+[34m[2023-06-12 11:14:59,334][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceLoaderHelper.java:66][m - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+[34m[2023-06-12 11:14:59,334][m [32m[DEBUG][m [35m[main      ][m[31m[ValidationXmlParser.java:127][m - No META-INF/validation.xml found. Using annotation based configuration only.
+[34m[2023-06-12 11:14:59,334][m [32m[DEBUG][m [35m[main      ][m[31m[ValidationXmlParser.java:127][m - No META-INF/validation.xml found. Using annotation based configuration only.
+[34m[2023-06-12 11:14:59,336][m [32m[DEBUG][m [35m[main      ][m[31m[TraversableResolvers.java:60][m - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+[34m[2023-06-12 11:14:59,336][m [32m[DEBUG][m [35m[main      ][m[31m[TraversableResolvers.java:60][m - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+[34m[2023-06-12 11:14:59,337][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:300][m - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+[34m[2023-06-12 11:14:59,337][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:300][m - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+[34m[2023-06-12 11:14:59,337][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:375][m - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+[34m[2023-06-12 11:14:59,337][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:375][m - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+[34m[2023-06-12 11:14:59,338][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:376][m - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+[34m[2023-06-12 11:14:59,338][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:376][m - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+[34m[2023-06-12 11:14:59,338][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:377][m - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+[34m[2023-06-12 11:14:59,338][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:377][m - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+[34m[2023-06-12 11:14:59,338][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:378][m - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+[34m[2023-06-12 11:14:59,338][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:378][m - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+[34m[2023-06-12 11:14:59,338][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:379][m - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+[34m[2023-06-12 11:14:59,338][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:379][m - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+[34m[2023-06-12 11:14:59,542][m [32m[INFO ][m [35m[main      ][m[31m[ExecutorConfigurationSupport.java:181][m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m[2023-06-12 11:14:59,542][m [32m[INFO ][m [35m[main      ][m[31m[ExecutorConfigurationSupport.java:181][m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m[2023-06-12 11:14:59,932][m [32m[INFO ][m [35m[main      ][m[31m[ExecutorConfigurationSupport.java:181][m - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+[34m[2023-06-12 11:14:59,932][m [32m[INFO ][m [35m[main      ][m[31m[ExecutorConfigurationSupport.java:181][m - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+[34m[2023-06-12 11:15:00,335][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobExecutor.java:183][m - >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@4679554d[class com.xuecheng.media.service.jobhandler.SampleXxlJob#shardingJobHandler]
+[34m[2023-06-12 11:15:00,335][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobExecutor.java:183][m - >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@4679554d[class com.xuecheng.media.service.jobhandler.SampleXxlJob#shardingJobHandler]
+[34m[2023-06-12 11:15:00,336][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobExecutor.java:183][m - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@43719e98[class com.xuecheng.media.service.jobhandler.SampleXxlJob#demoJobHandler]
+[34m[2023-06-12 11:15:00,336][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobExecutor.java:183][m - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@43719e98[class com.xuecheng.media.service.jobhandler.SampleXxlJob#demoJobHandler]
+[34m[2023-06-12 11:15:00,336][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobExecutor.java:183][m - >>>>>>>>>>> xxl-job register jobhandler success, name:videoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@49353d43[class com.xuecheng.media.service.jobhandler.VideoTaskJob#videoJobHandler]
+[34m[2023-06-12 11:15:00,336][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobExecutor.java:183][m - >>>>>>>>>>> xxl-job register jobhandler success, name:videoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@49353d43[class com.xuecheng.media.service.jobhandler.VideoTaskJob#videoJobHandler]
+[34m[2023-06-12 11:15:00,416][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[InternalLoggerFactory.java:45][m - Using SLF4J as the default logging framework
+[34m[2023-06-12 11:15:00,416][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[InternalLoggerFactory.java:45][m - Using SLF4J as the default logging framework
+[34m[2023-06-12 11:15:00,420][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[MultithreadEventLoopGroup.java:44][m - -Dio.netty.eventLoopThreads: 32
+[34m[2023-06-12 11:15:00,420][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[MultithreadEventLoopGroup.java:44][m - -Dio.netty.eventLoopThreads: 32
+[34m[2023-06-12 11:15:00,473][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[InternalThreadLocalMap.java:56][m - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[34m[2023-06-12 11:15:00,473][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[InternalThreadLocalMap.java:56][m - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[34m[2023-06-12 11:15:00,476][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[InternalThreadLocalMap.java:59][m - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[34m[2023-06-12 11:15:00,476][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[InternalThreadLocalMap.java:59][m - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[34m[2023-06-12 11:15:00,494][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NioEventLoop.java:106][m - -Dio.netty.noKeySetOptimization: false
+[34m[2023-06-12 11:15:00,494][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NioEventLoop.java:106][m - -Dio.netty.noKeySetOptimization: false
+[34m[2023-06-12 11:15:00,494][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NioEventLoop.java:107][m - -Dio.netty.selectorAutoRebuildThreshold: 512
+[34m[2023-06-12 11:15:00,494][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NioEventLoop.java:107][m - -Dio.netty.selectorAutoRebuildThreshold: 512
+[34m[2023-06-12 11:15:00,526][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1036][m - Platform: Windows
+[34m[2023-06-12 11:15:00,526][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1036][m - Platform: Windows
+[34m[2023-06-12 11:15:00,529][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:417][m - -Dio.netty.noUnsafe: false
+[34m[2023-06-12 11:15:00,529][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:417][m - -Dio.netty.noUnsafe: false
+[34m[2023-06-12 11:15:00,529][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:897][m - Java version: 17
+[34m[2023-06-12 11:15:00,529][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:897][m - Java version: 17
+[34m[2023-06-12 11:15:00,531][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:130][m - sun.misc.Unsafe.theUnsafe: available
+[34m[2023-06-12 11:15:00,531][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:130][m - sun.misc.Unsafe.theUnsafe: available
+[34m[2023-06-12 11:15:00,532][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:154][m - sun.misc.Unsafe.copyMemory: available
+[34m[2023-06-12 11:15:00,532][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:154][m - sun.misc.Unsafe.copyMemory: available
+[34m[2023-06-12 11:15:00,533][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:192][m - java.nio.Buffer.address: available
+[34m[2023-06-12 11:15:00,533][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:192][m - java.nio.Buffer.address: available
+[34m[2023-06-12 11:15:00,534][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:266][m - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:238)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:232)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:293)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:44)
+	at com.xxl.job.core.server.EmbedServer$1.run(EmbedServer.java:42)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[34m[2023-06-12 11:15:00,534][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:266][m - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:238)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:232)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:293)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:44)
+	at com.xxl.job.core.server.EmbedServer$1.run(EmbedServer.java:42)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[34m[2023-06-12 11:15:00,545][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:331][m - java.nio.Bits.unaligned: available, true
+[34m[2023-06-12 11:15:00,545][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:331][m - java.nio.Bits.unaligned: available, true
+[34m[2023-06-12 11:15:00,547][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:390][m - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @449a4f23
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:352)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:343)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:293)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:44)
+	at com.xxl.job.core.server.EmbedServer$1.run(EmbedServer.java:42)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[34m[2023-06-12 11:15:00,547][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:390][m - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @449a4f23
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:352)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:343)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:293)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:44)
+	at com.xxl.job.core.server.EmbedServer$1.run(EmbedServer.java:42)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[34m[2023-06-12 11:15:00,548][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:403][m - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[34m[2023-06-12 11:15:00,548][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:403][m - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[34m[2023-06-12 11:15:00,549][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1079][m - sun.misc.Unsafe: available
+[34m[2023-06-12 11:15:00,549][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1079][m - sun.misc.Unsafe: available
+[34m[2023-06-12 11:15:00,550][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1181][m - maxDirectMemory: 8514437120 bytes (maybe)
+[34m[2023-06-12 11:15:00,550][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1181][m - maxDirectMemory: 8514437120 bytes (maybe)
+[34m[2023-06-12 11:15:00,550][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1200][m - -Dio.netty.tmpdir: C:\Users\Jiang\AppData\Local\Temp (java.io.tmpdir)
+[34m[2023-06-12 11:15:00,550][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1200][m - -Dio.netty.tmpdir: C:\Users\Jiang\AppData\Local\Temp (java.io.tmpdir)
+[34m[2023-06-12 11:15:00,551][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1279][m - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[34m[2023-06-12 11:15:00,551][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1279][m - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[34m[2023-06-12 11:15:00,552][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:177][m - -Dio.netty.maxDirectMemory: -1 bytes
+[34m[2023-06-12 11:15:00,552][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:177][m - -Dio.netty.maxDirectMemory: -1 bytes
+[34m[2023-06-12 11:15:00,552][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:184][m - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[34m[2023-06-12 11:15:00,552][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:184][m - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[34m[2023-06-12 11:15:00,554][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[CleanerJava9.java:71][m - java.nio.ByteBuffer.cleaner(): available
+[34m[2023-06-12 11:15:00,554][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[CleanerJava9.java:71][m - java.nio.ByteBuffer.cleaner(): available
+[34m[2023-06-12 11:15:00,555][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:204][m - -Dio.netty.noPreferDirect: false
+[34m[2023-06-12 11:15:00,555][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:204][m - -Dio.netty.noPreferDirect: false
+[34m[2023-06-12 11:15:00,564][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:940][m - org.jctools-core.MpscChunkedArrayQueue: available
+[34m[2023-06-12 11:15:00,564][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:940][m - org.jctools-core.MpscChunkedArrayQueue: available
+[34m[2023-06-12 11:15:00,641][m [32m[INFO ][m [35m[main      ][m[31m[StartupInfoLogger.java:61][m - Started BigFileTest in 4.52 seconds (JVM running for 5.987)
+[34m[2023-06-12 11:15:00,641][m [32m[INFO ][m [35m[main      ][m[31m[StartupInfoLogger.java:61][m - Started BigFileTest in 4.52 seconds (JVM running for 5.987)
+[34m[2023-06-12 11:15:00,726][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[DefaultChannelId.java:79][m - -Dio.netty.processId: 25152 (auto-detected)
+[34m[2023-06-12 11:15:00,726][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[DefaultChannelId.java:79][m - -Dio.netty.processId: 25152 (auto-detected)
+[34m[2023-06-12 11:15:00,728][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtil.java:135][m - -Djava.net.preferIPv4Stack: false
+[34m[2023-06-12 11:15:00,728][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtil.java:135][m - -Djava.net.preferIPv4Stack: false
+[34m[2023-06-12 11:15:00,728][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtil.java:136][m - -Djava.net.preferIPv6Addresses: false
+[34m[2023-06-12 11:15:00,728][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtil.java:136][m - -Djava.net.preferIPv6Addresses: false
+[34m[2023-06-12 11:15:00,758][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtilInitializations.java:129][m - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[34m[2023-06-12 11:15:00,758][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtilInitializations.java:129][m - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[34m[2023-06-12 11:15:00,761][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtil.java:187][m - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+[34m[2023-06-12 11:15:00,761][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtil.java:187][m - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+[34m[2023-06-12 11:15:00,797][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[DefaultChannelId.java:101][m - -Dio.netty.machineId: 00:50:56:ff:fe:c0:00:01 (auto-detected)
+[34m[2023-06-12 11:15:00,797][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[DefaultChannelId.java:101][m - -Dio.netty.machineId: 00:50:56:ff:fe:c0:00:01 (auto-detected)
+[34m[2023-06-12 11:15:00,836][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ResourceLeakDetector.java:129][m - -Dio.netty.leakDetection.level: simple
+[34m[2023-06-12 11:15:00,836][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ResourceLeakDetector.java:129][m - -Dio.netty.leakDetection.level: simple
+[34m[2023-06-12 11:15:00,836][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ResourceLeakDetector.java:130][m - -Dio.netty.leakDetection.targetRecords: 4
+[34m[2023-06-12 11:15:00,836][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ResourceLeakDetector.java:130][m - -Dio.netty.leakDetection.targetRecords: 4
+[34m[2023-06-12 11:15:00,887][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:154][m - -Dio.netty.allocator.numHeapArenas: 32
+[34m[2023-06-12 11:15:00,887][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:154][m - -Dio.netty.allocator.numHeapArenas: 32
+[34m[2023-06-12 11:15:00,887][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:155][m - -Dio.netty.allocator.numDirectArenas: 32
+[34m[2023-06-12 11:15:00,887][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:155][m - -Dio.netty.allocator.numDirectArenas: 32
+[34m[2023-06-12 11:15:00,888][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:157][m - -Dio.netty.allocator.pageSize: 8192
+[34m[2023-06-12 11:15:00,888][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:157][m - -Dio.netty.allocator.pageSize: 8192
+[34m[2023-06-12 11:15:00,888][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:162][m - -Dio.netty.allocator.maxOrder: 11
+[34m[2023-06-12 11:15:00,888][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:162][m - -Dio.netty.allocator.maxOrder: 11
+[34m[2023-06-12 11:15:00,888][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:166][m - -Dio.netty.allocator.chunkSize: 16777216
+[34m[2023-06-12 11:15:00,888][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:166][m - -Dio.netty.allocator.chunkSize: 16777216
+[34m[2023-06-12 11:15:00,888][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:167][m - -Dio.netty.allocator.smallCacheSize: 256
+[34m[2023-06-12 11:15:00,888][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:167][m - -Dio.netty.allocator.smallCacheSize: 256
+[34m[2023-06-12 11:15:00,888][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:168][m - -Dio.netty.allocator.normalCacheSize: 64
+[34m[2023-06-12 11:15:00,888][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:168][m - -Dio.netty.allocator.normalCacheSize: 64
+[34m[2023-06-12 11:15:00,888][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:169][m - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[34m[2023-06-12 11:15:00,888][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:169][m - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[34m[2023-06-12 11:15:00,889][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:170][m - -Dio.netty.allocator.cacheTrimInterval: 8192
+[34m[2023-06-12 11:15:00,889][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:170][m - -Dio.netty.allocator.cacheTrimInterval: 8192
+[34m[2023-06-12 11:15:00,889][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:171][m - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[34m[2023-06-12 11:15:00,889][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:171][m - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[34m[2023-06-12 11:15:00,889][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:172][m - -Dio.netty.allocator.useCacheForAllThreads: true
+[34m[2023-06-12 11:15:00,889][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:172][m - -Dio.netty.allocator.useCacheForAllThreads: true
+[34m[2023-06-12 11:15:00,889][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:173][m - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[34m[2023-06-12 11:15:00,889][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:173][m - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[34m[2023-06-12 11:15:00,919][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ByteBufUtil.java:87][m - -Dio.netty.allocator.type: pooled
+[34m[2023-06-12 11:15:00,919][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ByteBufUtil.java:87][m - -Dio.netty.allocator.type: pooled
+[34m[2023-06-12 11:15:00,919][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ByteBufUtil.java:96][m - -Dio.netty.threadLocalDirectBufferSize: 0
+[34m[2023-06-12 11:15:00,919][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ByteBufUtil.java:96][m - -Dio.netty.threadLocalDirectBufferSize: 0
+[34m[2023-06-12 11:15:00,919][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ByteBufUtil.java:99][m - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[34m[2023-06-12 11:15:00,919][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ByteBufUtil.java:99][m - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[34m[2023-06-12 11:15:00,931][m [32m[ERROR][m [35m[Thread-10 ][m[31m[EmbedServer.java:93][m - >>>>>>>>>>> xxl-job remoting server error.
+java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:555)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:134)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:550)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:506)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:491)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:248)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[34m[2023-06-12 11:15:00,931][m [32m[ERROR][m [35m[Thread-10 ][m[31m[EmbedServer.java:93][m - >>>>>>>>>>> xxl-job remoting server error.
+java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:555)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:134)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:550)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:506)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:491)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:248)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[34m[2023-06-12 11:15:01,214][m [32m[WARN ][m [35m[Thread-16 ][m[31m[NotifyCenter.java:145][m - [NotifyCenter] Start destroying Publisher
+[34m[2023-06-12 11:15:01,214][m [32m[WARN ][m [35m[Thread-1  ][m[31m[HttpClientBeanHolder.java:108][m - [HttpClientBeanHolder] Start destroying common HttpClient
+[34m[2023-06-12 11:15:01,214][m [32m[WARN ][m [35m[Thread-16 ][m[31m[NotifyCenter.java:145][m - [NotifyCenter] Start destroying Publisher
+[34m[2023-06-12 11:15:01,214][m [32m[WARN ][m [35m[Thread-1  ][m[31m[HttpClientBeanHolder.java:108][m - [HttpClientBeanHolder] Start destroying common HttpClient
+[34m[2023-06-12 11:15:01,215][m [32m[WARN ][m [35m[Thread-16 ][m[31m[NotifyCenter.java:162][m - [NotifyCenter] Destruction of the end
+[34m[2023-06-12 11:15:01,215][m [32m[WARN ][m [35m[Thread-16 ][m[31m[NotifyCenter.java:162][m - [NotifyCenter] Destruction of the end
+[34m[2023-06-12 11:15:01,215][m [32m[WARN ][m [35m[Thread-1  ][m[31m[HttpClientBeanHolder.java:114][m - [HttpClientBeanHolder] Destruction of the end
+[34m[2023-06-12 11:15:01,215][m [32m[WARN ][m [35m[Thread-1  ][m[31m[HttpClientBeanHolder.java:114][m - [HttpClientBeanHolder] Destruction of the end
+[34m[2023-06-12 11:15:01,215][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[ExecutorConfigurationSupport.java:218][m - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+[34m[2023-06-12 11:15:01,215][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[ExecutorConfigurationSupport.java:218][m - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+[34m[2023-06-12 11:15:07,710][m [32m[WARN ][m [35m[SpringContextShutdownHook][m[31m[NamingHttpClientManager.java:72][m - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[34m[2023-06-12 11:15:07,710][m [32m[WARN ][m [35m[SpringContextShutdownHook][m[31m[NamingHttpClientManager.java:72][m - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[34m[2023-06-12 11:15:07,710][m [32m[WARN ][m [35m[SpringContextShutdownHook][m[31m[NamingHttpClientManager.java:79][m - [NamingHttpClientManager] Destruction of the end
+[34m[2023-06-12 11:15:07,710][m [32m[WARN ][m [35m[SpringContextShutdownHook][m[31m[NamingHttpClientManager.java:79][m - [NamingHttpClientManager] Destruction of the end
+[34m[2023-06-12 11:15:07,711][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[ExecutorConfigurationSupport.java:218][m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m[2023-06-12 11:15:07,711][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[ExecutorConfigurationSupport.java:218][m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m[2023-06-12 11:15:07,712][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[EmbedServer.java:117][m - >>>>>>>>>>> xxl-job remoting server destroy success.
+[34m[2023-06-12 11:15:07,712][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[EmbedServer.java:117][m - >>>>>>>>>>> xxl-job remoting server destroy success.
+[34m[2023-06-12 11:15:07,712][m [32m[INFO ][m [35m[xxl-job, executor JobLogFileCleanThread][m[31m[JobLogFileCleanThread.java:99][m - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+[34m[2023-06-12 11:15:07,712][m [32m[INFO ][m [35m[xxl-job, executor JobLogFileCleanThread][m[31m[JobLogFileCleanThread.java:99][m - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+[34m[2023-06-12 11:15:07,713][m [32m[INFO ][m [35m[xxl-job, executor TriggerCallbackThread][m[31m[TriggerCallbackThread.java:98][m - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+[34m[2023-06-12 11:15:07,713][m [32m[INFO ][m [35m[xxl-job, executor TriggerCallbackThread][m[31m[TriggerCallbackThread.java:98][m - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+[34m[2023-06-12 11:15:07,713][m [32m[INFO ][m [35m[Thread-9  ][m[31m[TriggerCallbackThread.java:128][m - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+[34m[2023-06-12 11:15:07,713][m [32m[INFO ][m [35m[Thread-9  ][m[31m[TriggerCallbackThread.java:128][m - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+[34m[2023-06-12 11:16:57,388][m [32m[INFO ][m [35m[main      ][m[31m[SpringApplication.java:655][m - The following profiles are active: dev
+[34m[2023-06-12 11:16:57,388][m [32m[INFO ][m [35m[main      ][m[31m[SpringApplication.java:655][m - The following profiles are active: dev
+[34m[2023-06-12 11:16:57,947][m [32m[DEBUG][m [35m[main      ][m[31m[LogFactory.java:105][m - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+[34m[2023-06-12 11:16:57,947][m [32m[DEBUG][m [35m[main      ][m[31m[LogFactory.java:105][m - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+[34m[2023-06-12 11:16:58,034][m [32m[INFO ][m [35m[main      ][m[31m[GenericScope.java:295][m - BeanFactory id=9a99e6d5-27be-3e3d-b340-01ed827d66fc
+[34m[2023-06-12 11:16:58,034][m [32m[INFO ][m [35m[main      ][m[31m[GenericScope.java:295][m - BeanFactory id=9a99e6d5-27be-3e3d-b340-01ed827d66fc
+[34m[2023-06-12 11:16:58,281][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:946][m - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+[34m[2023-06-12 11:16:58,281][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:946][m - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+[34m[2023-06-12 11:16:58,374][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@43c0c13a'
+[34m[2023-06-12 11:16:58,374][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@43c0c13a'
+[34m[2023-06-12 11:16:58,532][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.insert
+[34m[2023-06-12 11:16:58,532][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.insert
+[34m[2023-06-12 11:16:58,538][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.delete
+[34m[2023-06-12 11:16:58,538][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.delete
+[34m[2023-06-12 11:16:58,542][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.deleteByMap
+[34m[2023-06-12 11:16:58,542][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.deleteByMap
+[34m[2023-06-12 11:16:58,562][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.deleteById
+[34m[2023-06-12 11:16:58,562][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.deleteById
+[34m[2023-06-12 11:16:58,565][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.deleteBatchIds
+[34m[2023-06-12 11:16:58,565][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.deleteBatchIds
+[34m[2023-06-12 11:16:58,569][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.update
+[34m[2023-06-12 11:16:58,569][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.update
+[34m[2023-06-12 11:16:58,571][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.updateById
+[34m[2023-06-12 11:16:58,571][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.updateById
+[34m[2023-06-12 11:16:58,572][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectById
+[34m[2023-06-12 11:16:58,572][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectById
+[34m[2023-06-12 11:16:58,575][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectBatchIds
+[34m[2023-06-12 11:16:58,575][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectBatchIds
+[34m[2023-06-12 11:16:58,577][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectByMap
+[34m[2023-06-12 11:16:58,577][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectByMap
+[34m[2023-06-12 11:16:58,580][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectOne
+[34m[2023-06-12 11:16:58,580][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectOne
+[34m[2023-06-12 11:16:58,582][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectCount
+[34m[2023-06-12 11:16:58,582][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectCount
+[34m[2023-06-12 11:16:58,585][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectMaps
+[34m[2023-06-12 11:16:58,585][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectMaps
+[34m[2023-06-12 11:16:58,587][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectMapsPage
+[34m[2023-06-12 11:16:58,587][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectMapsPage
+[34m[2023-06-12 11:16:58,589][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectObjs
+[34m[2023-06-12 11:16:58,589][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectObjs
+[34m[2023-06-12 11:16:58,593][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectList
+[34m[2023-06-12 11:16:58,593][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectList
+[34m[2023-06-12 11:16:58,595][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectPage
+[34m[2023-06-12 11:16:58,595][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaFilesMapper.selectPage
+[34m[2023-06-12 11:16:58,596][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MediaFilesMapper.xml]'
+[34m[2023-06-12 11:16:58,596][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MediaFilesMapper.xml]'
+[34m[2023-06-12 11:16:58,610][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.insert
+[34m[2023-06-12 11:16:58,610][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.insert
+[34m[2023-06-12 11:16:58,613][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.delete
+[34m[2023-06-12 11:16:58,613][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.delete
+[34m[2023-06-12 11:16:58,615][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.deleteByMap
+[34m[2023-06-12 11:16:58,615][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.deleteByMap
+[34m[2023-06-12 11:16:58,616][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.deleteById
+[34m[2023-06-12 11:16:58,616][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.deleteById
+[34m[2023-06-12 11:16:58,618][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.deleteBatchIds
+[34m[2023-06-12 11:16:58,618][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.deleteBatchIds
+[34m[2023-06-12 11:16:58,619][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.update
+[34m[2023-06-12 11:16:58,619][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.update
+[34m[2023-06-12 11:16:58,622][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.updateById
+[34m[2023-06-12 11:16:58,622][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.updateById
+[34m[2023-06-12 11:16:58,622][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectById
+[34m[2023-06-12 11:16:58,622][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectById
+[34m[2023-06-12 11:16:58,624][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectBatchIds
+[34m[2023-06-12 11:16:58,624][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectBatchIds
+[34m[2023-06-12 11:16:58,626][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectByMap
+[34m[2023-06-12 11:16:58,626][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectByMap
+[34m[2023-06-12 11:16:58,628][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectOne
+[34m[2023-06-12 11:16:58,628][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectOne
+[34m[2023-06-12 11:16:58,630][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectCount
+[34m[2023-06-12 11:16:58,630][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectCount
+[34m[2023-06-12 11:16:58,632][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectMaps
+[34m[2023-06-12 11:16:58,632][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectMaps
+[34m[2023-06-12 11:16:58,634][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectMapsPage
+[34m[2023-06-12 11:16:58,634][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectMapsPage
+[34m[2023-06-12 11:16:58,637][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectObjs
+[34m[2023-06-12 11:16:58,637][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectObjs
+[34m[2023-06-12 11:16:58,640][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectList
+[34m[2023-06-12 11:16:58,640][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectList
+[34m[2023-06-12 11:16:58,643][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectPage
+[34m[2023-06-12 11:16:58,643][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessHistoryMapper.selectPage
+[34m[2023-06-12 11:16:58,643][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MediaProcessHistoryMapper.xml]'
+[34m[2023-06-12 11:16:58,643][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MediaProcessHistoryMapper.xml]'
+[34m[2023-06-12 11:16:58,655][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectByShardIndex
+[34m[2023-06-12 11:16:58,655][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectByShardIndex
+[34m[2023-06-12 11:16:58,657][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.startTask
+[34m[2023-06-12 11:16:58,657][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.startTask
+[34m[2023-06-12 11:16:58,659][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.insert
+[34m[2023-06-12 11:16:58,659][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.insert
+[34m[2023-06-12 11:16:58,661][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.delete
+[34m[2023-06-12 11:16:58,661][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.delete
+[34m[2023-06-12 11:16:58,663][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.deleteByMap
+[34m[2023-06-12 11:16:58,663][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.deleteByMap
+[34m[2023-06-12 11:16:58,664][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.deleteById
+[34m[2023-06-12 11:16:58,664][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.deleteById
+[34m[2023-06-12 11:16:58,666][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.deleteBatchIds
+[34m[2023-06-12 11:16:58,666][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.deleteBatchIds
+[34m[2023-06-12 11:16:58,669][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.update
+[34m[2023-06-12 11:16:58,669][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.update
+[34m[2023-06-12 11:16:58,672][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.updateById
+[34m[2023-06-12 11:16:58,672][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.updateById
+[34m[2023-06-12 11:16:58,672][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectById
+[34m[2023-06-12 11:16:58,672][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectById
+[34m[2023-06-12 11:16:58,675][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectBatchIds
+[34m[2023-06-12 11:16:58,675][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectBatchIds
+[34m[2023-06-12 11:16:58,677][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectByMap
+[34m[2023-06-12 11:16:58,677][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectByMap
+[34m[2023-06-12 11:16:58,679][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectOne
+[34m[2023-06-12 11:16:58,679][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectOne
+[34m[2023-06-12 11:16:58,681][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectCount
+[34m[2023-06-12 11:16:58,681][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectCount
+[34m[2023-06-12 11:16:58,683][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectMaps
+[34m[2023-06-12 11:16:58,683][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectMaps
+[34m[2023-06-12 11:16:58,685][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectMapsPage
+[34m[2023-06-12 11:16:58,685][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectMapsPage
+[34m[2023-06-12 11:16:58,688][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectObjs
+[34m[2023-06-12 11:16:58,688][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectObjs
+[34m[2023-06-12 11:16:58,690][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectList
+[34m[2023-06-12 11:16:58,690][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectList
+[34m[2023-06-12 11:16:58,692][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectPage
+[34m[2023-06-12 11:16:58,692][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MediaProcessMapper.selectPage
+[34m[2023-06-12 11:16:58,693][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MediaProcessMapper.xml]'
+[34m[2023-06-12 11:16:58,693][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MediaProcessMapper.xml]'
+[34m[2023-06-12 11:16:58,704][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.insert
+[34m[2023-06-12 11:16:58,704][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.insert
+[34m[2023-06-12 11:16:58,705][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.delete
+[34m[2023-06-12 11:16:58,705][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.delete
+[34m[2023-06-12 11:16:58,707][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.deleteByMap
+[34m[2023-06-12 11:16:58,707][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.deleteByMap
+[34m[2023-06-12 11:16:58,708][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.deleteById
+[34m[2023-06-12 11:16:58,708][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.deleteById
+[34m[2023-06-12 11:16:58,709][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.deleteBatchIds
+[34m[2023-06-12 11:16:58,709][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.deleteBatchIds
+[34m[2023-06-12 11:16:58,711][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.update
+[34m[2023-06-12 11:16:58,711][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.update
+[34m[2023-06-12 11:16:58,712][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.updateById
+[34m[2023-06-12 11:16:58,712][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.updateById
+[34m[2023-06-12 11:16:58,713][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectById
+[34m[2023-06-12 11:16:58,713][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectById
+[34m[2023-06-12 11:16:58,714][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectBatchIds
+[34m[2023-06-12 11:16:58,714][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectBatchIds
+[34m[2023-06-12 11:16:58,716][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectByMap
+[34m[2023-06-12 11:16:58,716][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectByMap
+[34m[2023-06-12 11:16:58,718][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectOne
+[34m[2023-06-12 11:16:58,718][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectOne
+[34m[2023-06-12 11:16:58,720][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectCount
+[34m[2023-06-12 11:16:58,720][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectCount
+[34m[2023-06-12 11:16:58,722][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectMaps
+[34m[2023-06-12 11:16:58,722][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectMaps
+[34m[2023-06-12 11:16:58,724][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectMapsPage
+[34m[2023-06-12 11:16:58,724][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectMapsPage
+[34m[2023-06-12 11:16:58,726][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectObjs
+[34m[2023-06-12 11:16:58,726][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectObjs
+[34m[2023-06-12 11:16:58,728][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectList
+[34m[2023-06-12 11:16:58,728][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectList
+[34m[2023-06-12 11:16:58,730][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectPage
+[34m[2023-06-12 11:16:58,730][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageHistoryMapper.selectPage
+[34m[2023-06-12 11:16:58,730][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MqMessageHistoryMapper.xml]'
+[34m[2023-06-12 11:16:58,730][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MqMessageHistoryMapper.xml]'
+[34m[2023-06-12 11:16:58,739][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.insert
+[34m[2023-06-12 11:16:58,739][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.insert
+[34m[2023-06-12 11:16:58,741][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.delete
+[34m[2023-06-12 11:16:58,741][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.delete
+[34m[2023-06-12 11:16:58,743][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.deleteByMap
+[34m[2023-06-12 11:16:58,743][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.deleteByMap
+[34m[2023-06-12 11:16:58,745][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.deleteById
+[34m[2023-06-12 11:16:58,745][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.deleteById
+[34m[2023-06-12 11:16:58,746][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.deleteBatchIds
+[34m[2023-06-12 11:16:58,746][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.deleteBatchIds
+[34m[2023-06-12 11:16:58,749][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.update
+[34m[2023-06-12 11:16:58,749][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.update
+[34m[2023-06-12 11:16:58,751][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.updateById
+[34m[2023-06-12 11:16:58,751][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.updateById
+[34m[2023-06-12 11:16:58,752][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectById
+[34m[2023-06-12 11:16:58,752][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectById
+[34m[2023-06-12 11:16:58,754][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectBatchIds
+[34m[2023-06-12 11:16:58,754][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectBatchIds
+[34m[2023-06-12 11:16:58,755][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectByMap
+[34m[2023-06-12 11:16:58,755][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectByMap
+[34m[2023-06-12 11:16:58,757][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectOne
+[34m[2023-06-12 11:16:58,757][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectOne
+[34m[2023-06-12 11:16:58,760][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectCount
+[34m[2023-06-12 11:16:58,760][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectCount
+[34m[2023-06-12 11:16:58,762][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectMaps
+[34m[2023-06-12 11:16:58,762][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectMaps
+[34m[2023-06-12 11:16:58,764][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectMapsPage
+[34m[2023-06-12 11:16:58,764][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectMapsPage
+[34m[2023-06-12 11:16:58,765][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectObjs
+[34m[2023-06-12 11:16:58,765][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectObjs
+[34m[2023-06-12 11:16:58,768][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectList
+[34m[2023-06-12 11:16:58,768][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectList
+[34m[2023-06-12 11:16:58,769][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectPage
+[34m[2023-06-12 11:16:58,769][m [32m[DEBUG][m [35m[main      ][m[31m[MybatisConfiguration.java:128][m - addMappedStatement: com.xuecheng.media.mapper.MqMessageMapper.selectPage
+[34m[2023-06-12 11:16:58,770][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MqMessageMapper.xml]'
+[34m[2023-06-12 11:16:58,770][m [32m[DEBUG][m [35m[main      ][m[31m[Logger.java:49][m - Parsed mapper file: 'file [D:\Study\JAVA\简历项目\xuecheng\media\target\classes\mapper\MqMessageMapper.xml]'
+[34m[2023-06-12 11:16:58,883][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobConfig.java:46][m - >>>>>>>>>>> xxl-job config init.
+[34m[2023-06-12 11:16:58,883][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobConfig.java:46][m - >>>>>>>>>>> xxl-job config init.
+[34m[2023-06-12 11:16:59,089][m [32m[WARN ][m [35m[main      ][m[31m[URLConfigurationSource.java:121][m - No URLs will be polled as dynamic configuration sources.
+[34m[2023-06-12 11:16:59,089][m [32m[WARN ][m [35m[main      ][m[31m[URLConfigurationSource.java:121][m - No URLs will be polled as dynamic configuration sources.
+[34m[2023-06-12 11:16:59,090][m [32m[INFO ][m [35m[main      ][m[31m[URLConfigurationSource.java:122][m - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[34m[2023-06-12 11:16:59,090][m [32m[INFO ][m [35m[main      ][m[31m[URLConfigurationSource.java:122][m - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[34m[2023-06-12 11:16:59,098][m [32m[WARN ][m [35m[main      ][m[31m[URLConfigurationSource.java:121][m - No URLs will be polled as dynamic configuration sources.
+[34m[2023-06-12 11:16:59,098][m [32m[WARN ][m [35m[main      ][m[31m[URLConfigurationSource.java:121][m - No URLs will be polled as dynamic configuration sources.
+[34m[2023-06-12 11:16:59,098][m [32m[INFO ][m [35m[main      ][m[31m[URLConfigurationSource.java:122][m - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[34m[2023-06-12 11:16:59,098][m [32m[INFO ][m [35m[main      ][m[31m[URLConfigurationSource.java:122][m - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[34m[2023-06-12 11:16:59,132][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceBundleMessageInterpolator.java:172][m - Loaded expression factory via original TCCL
+[34m[2023-06-12 11:16:59,132][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceBundleMessageInterpolator.java:172][m - Loaded expression factory via original TCCL
+[34m[2023-06-12 11:16:59,140][m [32m[DEBUG][m [35m[main      ][m[31m[AbstractConfigurationImpl.java:171][m - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+[34m[2023-06-12 11:16:59,140][m [32m[DEBUG][m [35m[main      ][m[31m[AbstractConfigurationImpl.java:171][m - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+[34m[2023-06-12 11:16:59,141][m [32m[DEBUG][m [35m[main      ][m[31m[AbstractConfigurationImpl.java:203][m - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+[34m[2023-06-12 11:16:59,141][m [32m[DEBUG][m [35m[main      ][m[31m[AbstractConfigurationImpl.java:203][m - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+[34m[2023-06-12 11:16:59,142][m [32m[DEBUG][m [35m[main      ][m[31m[AbstractConfigurationImpl.java:217][m - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+[34m[2023-06-12 11:16:59,142][m [32m[DEBUG][m [35m[main      ][m[31m[AbstractConfigurationImpl.java:217][m - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+[34m[2023-06-12 11:16:59,145][m [32m[DEBUG][m [35m[main      ][m[31m[ValidationXmlParser.java:120][m - Trying to load META-INF/validation.xml for XML based Validator configuration.
+[34m[2023-06-12 11:16:59,145][m [32m[DEBUG][m [35m[main      ][m[31m[ValidationXmlParser.java:120][m - Trying to load META-INF/validation.xml for XML based Validator configuration.
+[34m[2023-06-12 11:16:59,145][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceLoaderHelper.java:53][m - Trying to load META-INF/validation.xml via user class loader
+[34m[2023-06-12 11:16:59,145][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceLoaderHelper.java:53][m - Trying to load META-INF/validation.xml via user class loader
+[34m[2023-06-12 11:16:59,146][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceLoaderHelper.java:60][m - Trying to load META-INF/validation.xml via TCCL
+[34m[2023-06-12 11:16:59,146][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceLoaderHelper.java:60][m - Trying to load META-INF/validation.xml via TCCL
+[34m[2023-06-12 11:16:59,147][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceLoaderHelper.java:66][m - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+[34m[2023-06-12 11:16:59,147][m [32m[DEBUG][m [35m[main      ][m[31m[ResourceLoaderHelper.java:66][m - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+[34m[2023-06-12 11:16:59,147][m [32m[DEBUG][m [35m[main      ][m[31m[ValidationXmlParser.java:127][m - No META-INF/validation.xml found. Using annotation based configuration only.
+[34m[2023-06-12 11:16:59,147][m [32m[DEBUG][m [35m[main      ][m[31m[ValidationXmlParser.java:127][m - No META-INF/validation.xml found. Using annotation based configuration only.
+[34m[2023-06-12 11:16:59,148][m [32m[DEBUG][m [35m[main      ][m[31m[TraversableResolvers.java:60][m - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+[34m[2023-06-12 11:16:59,148][m [32m[DEBUG][m [35m[main      ][m[31m[TraversableResolvers.java:60][m - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+[34m[2023-06-12 11:16:59,149][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:300][m - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+[34m[2023-06-12 11:16:59,149][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:300][m - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+[34m[2023-06-12 11:16:59,150][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:375][m - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+[34m[2023-06-12 11:16:59,150][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:375][m - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+[34m[2023-06-12 11:16:59,150][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:376][m - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+[34m[2023-06-12 11:16:59,150][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:376][m - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+[34m[2023-06-12 11:16:59,150][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:377][m - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+[34m[2023-06-12 11:16:59,150][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:377][m - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+[34m[2023-06-12 11:16:59,151][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:378][m - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+[34m[2023-06-12 11:16:59,151][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:378][m - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+[34m[2023-06-12 11:16:59,151][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:379][m - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+[34m[2023-06-12 11:16:59,151][m [32m[DEBUG][m [35m[main      ][m[31m[ValidatorFactoryConfigurationHelper.java:379][m - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+[34m[2023-06-12 11:16:59,366][m [32m[INFO ][m [35m[main      ][m[31m[ExecutorConfigurationSupport.java:181][m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m[2023-06-12 11:16:59,366][m [32m[INFO ][m [35m[main      ][m[31m[ExecutorConfigurationSupport.java:181][m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m[2023-06-12 11:16:59,744][m [32m[INFO ][m [35m[main      ][m[31m[ExecutorConfigurationSupport.java:181][m - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+[34m[2023-06-12 11:16:59,744][m [32m[INFO ][m [35m[main      ][m[31m[ExecutorConfigurationSupport.java:181][m - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+[34m[2023-06-12 11:17:00,129][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobExecutor.java:183][m - >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@4679554d[class com.xuecheng.media.service.jobhandler.SampleXxlJob#shardingJobHandler]
+[34m[2023-06-12 11:17:00,129][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobExecutor.java:183][m - >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@4679554d[class com.xuecheng.media.service.jobhandler.SampleXxlJob#shardingJobHandler]
+[34m[2023-06-12 11:17:00,129][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobExecutor.java:183][m - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@43719e98[class com.xuecheng.media.service.jobhandler.SampleXxlJob#demoJobHandler]
+[34m[2023-06-12 11:17:00,129][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobExecutor.java:183][m - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@43719e98[class com.xuecheng.media.service.jobhandler.SampleXxlJob#demoJobHandler]
+[34m[2023-06-12 11:17:00,130][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobExecutor.java:183][m - >>>>>>>>>>> xxl-job register jobhandler success, name:videoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@49353d43[class com.xuecheng.media.service.jobhandler.VideoTaskJob#videoJobHandler]
+[34m[2023-06-12 11:17:00,130][m [32m[INFO ][m [35m[main      ][m[31m[XxlJobExecutor.java:183][m - >>>>>>>>>>> xxl-job register jobhandler success, name:videoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@49353d43[class com.xuecheng.media.service.jobhandler.VideoTaskJob#videoJobHandler]
+[34m[2023-06-12 11:17:00,202][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[InternalLoggerFactory.java:45][m - Using SLF4J as the default logging framework
+[34m[2023-06-12 11:17:00,202][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[InternalLoggerFactory.java:45][m - Using SLF4J as the default logging framework
+[34m[2023-06-12 11:17:00,205][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[MultithreadEventLoopGroup.java:44][m - -Dio.netty.eventLoopThreads: 32
+[34m[2023-06-12 11:17:00,205][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[MultithreadEventLoopGroup.java:44][m - -Dio.netty.eventLoopThreads: 32
+[34m[2023-06-12 11:17:00,264][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[InternalThreadLocalMap.java:56][m - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[34m[2023-06-12 11:17:00,264][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[InternalThreadLocalMap.java:56][m - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[34m[2023-06-12 11:17:00,267][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[InternalThreadLocalMap.java:59][m - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[34m[2023-06-12 11:17:00,267][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[InternalThreadLocalMap.java:59][m - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[34m[2023-06-12 11:17:00,288][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NioEventLoop.java:106][m - -Dio.netty.noKeySetOptimization: false
+[34m[2023-06-12 11:17:00,288][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NioEventLoop.java:106][m - -Dio.netty.noKeySetOptimization: false
+[34m[2023-06-12 11:17:00,289][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NioEventLoop.java:107][m - -Dio.netty.selectorAutoRebuildThreshold: 512
+[34m[2023-06-12 11:17:00,289][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NioEventLoop.java:107][m - -Dio.netty.selectorAutoRebuildThreshold: 512
+[34m[2023-06-12 11:17:00,309][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1036][m - Platform: Windows
+[34m[2023-06-12 11:17:00,309][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1036][m - Platform: Windows
+[34m[2023-06-12 11:17:00,315][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:417][m - -Dio.netty.noUnsafe: false
+[34m[2023-06-12 11:17:00,315][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:417][m - -Dio.netty.noUnsafe: false
+[34m[2023-06-12 11:17:00,315][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:897][m - Java version: 17
+[34m[2023-06-12 11:17:00,315][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:897][m - Java version: 17
+[34m[2023-06-12 11:17:00,317][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:130][m - sun.misc.Unsafe.theUnsafe: available
+[34m[2023-06-12 11:17:00,317][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:130][m - sun.misc.Unsafe.theUnsafe: available
+[34m[2023-06-12 11:17:00,318][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:154][m - sun.misc.Unsafe.copyMemory: available
+[34m[2023-06-12 11:17:00,318][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:154][m - sun.misc.Unsafe.copyMemory: available
+[34m[2023-06-12 11:17:00,319][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:192][m - java.nio.Buffer.address: available
+[34m[2023-06-12 11:17:00,319][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:192][m - java.nio.Buffer.address: available
+[34m[2023-06-12 11:17:00,320][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:266][m - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:238)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:232)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:293)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:44)
+	at com.xxl.job.core.server.EmbedServer$1.run(EmbedServer.java:42)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[34m[2023-06-12 11:17:00,320][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:266][m - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:238)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:232)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:293)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:44)
+	at com.xxl.job.core.server.EmbedServer$1.run(EmbedServer.java:42)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[34m[2023-06-12 11:17:00,332][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:331][m - java.nio.Bits.unaligned: available, true
+[34m[2023-06-12 11:17:00,332][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:331][m - java.nio.Bits.unaligned: available, true
+[34m[2023-06-12 11:17:00,333][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:390][m - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @449a4f23
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:352)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:343)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:293)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:44)
+	at com.xxl.job.core.server.EmbedServer$1.run(EmbedServer.java:42)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[34m[2023-06-12 11:17:00,333][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:390][m - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @449a4f23
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:352)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:343)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:293)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:44)
+	at com.xxl.job.core.server.EmbedServer$1.run(EmbedServer.java:42)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[34m[2023-06-12 11:17:00,334][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:403][m - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[34m[2023-06-12 11:17:00,334][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent0.java:403][m - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[34m[2023-06-12 11:17:00,335][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1079][m - sun.misc.Unsafe: available
+[34m[2023-06-12 11:17:00,335][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1079][m - sun.misc.Unsafe: available
+[34m[2023-06-12 11:17:00,336][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1181][m - maxDirectMemory: 8514437120 bytes (maybe)
+[34m[2023-06-12 11:17:00,336][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1181][m - maxDirectMemory: 8514437120 bytes (maybe)
+[34m[2023-06-12 11:17:00,336][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1200][m - -Dio.netty.tmpdir: C:\Users\Jiang\AppData\Local\Temp (java.io.tmpdir)
+[34m[2023-06-12 11:17:00,336][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1200][m - -Dio.netty.tmpdir: C:\Users\Jiang\AppData\Local\Temp (java.io.tmpdir)
+[34m[2023-06-12 11:17:00,336][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1279][m - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[34m[2023-06-12 11:17:00,336][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:1279][m - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[34m[2023-06-12 11:17:00,337][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:177][m - -Dio.netty.maxDirectMemory: -1 bytes
+[34m[2023-06-12 11:17:00,337][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:177][m - -Dio.netty.maxDirectMemory: -1 bytes
+[34m[2023-06-12 11:17:00,337][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:184][m - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[34m[2023-06-12 11:17:00,337][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:184][m - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[34m[2023-06-12 11:17:00,339][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[CleanerJava9.java:71][m - java.nio.ByteBuffer.cleaner(): available
+[34m[2023-06-12 11:17:00,339][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[CleanerJava9.java:71][m - java.nio.ByteBuffer.cleaner(): available
+[34m[2023-06-12 11:17:00,340][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:204][m - -Dio.netty.noPreferDirect: false
+[34m[2023-06-12 11:17:00,340][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:204][m - -Dio.netty.noPreferDirect: false
+[34m[2023-06-12 11:17:00,350][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:940][m - org.jctools-core.MpscChunkedArrayQueue: available
+[34m[2023-06-12 11:17:00,350][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PlatformDependent.java:940][m - org.jctools-core.MpscChunkedArrayQueue: available
+[34m[2023-06-12 11:17:00,403][m [32m[INFO ][m [35m[main      ][m[31m[StartupInfoLogger.java:61][m - Started BigFileTest in 4.289 seconds (JVM running for 5.601)
+[34m[2023-06-12 11:17:00,403][m [32m[INFO ][m [35m[main      ][m[31m[StartupInfoLogger.java:61][m - Started BigFileTest in 4.289 seconds (JVM running for 5.601)
+[34m[2023-06-12 11:17:00,513][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[DefaultChannelId.java:79][m - -Dio.netty.processId: 20168 (auto-detected)
+[34m[2023-06-12 11:17:00,513][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[DefaultChannelId.java:79][m - -Dio.netty.processId: 20168 (auto-detected)
+[34m[2023-06-12 11:17:00,515][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtil.java:135][m - -Djava.net.preferIPv4Stack: false
+[34m[2023-06-12 11:17:00,515][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtil.java:135][m - -Djava.net.preferIPv4Stack: false
+[34m[2023-06-12 11:17:00,515][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtil.java:136][m - -Djava.net.preferIPv6Addresses: false
+[34m[2023-06-12 11:17:00,515][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtil.java:136][m - -Djava.net.preferIPv6Addresses: false
+[34m[2023-06-12 11:17:00,527][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtilInitializations.java:129][m - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[34m[2023-06-12 11:17:00,527][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtilInitializations.java:129][m - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[34m[2023-06-12 11:17:00,528][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtil.java:187][m - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+[34m[2023-06-12 11:17:00,528][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[NetUtil.java:187][m - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+[34m[2023-06-12 11:17:00,558][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[DefaultChannelId.java:101][m - -Dio.netty.machineId: 00:50:56:ff:fe:c0:00:01 (auto-detected)
+[34m[2023-06-12 11:17:00,558][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[DefaultChannelId.java:101][m - -Dio.netty.machineId: 00:50:56:ff:fe:c0:00:01 (auto-detected)
+[34m[2023-06-12 11:17:00,566][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ResourceLeakDetector.java:129][m - -Dio.netty.leakDetection.level: simple
+[34m[2023-06-12 11:17:00,566][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ResourceLeakDetector.java:129][m - -Dio.netty.leakDetection.level: simple
+[34m[2023-06-12 11:17:00,566][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ResourceLeakDetector.java:130][m - -Dio.netty.leakDetection.targetRecords: 4
+[34m[2023-06-12 11:17:00,566][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ResourceLeakDetector.java:130][m - -Dio.netty.leakDetection.targetRecords: 4
+[34m[2023-06-12 11:17:00,582][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:154][m - -Dio.netty.allocator.numHeapArenas: 32
+[34m[2023-06-12 11:17:00,582][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:154][m - -Dio.netty.allocator.numHeapArenas: 32
+[34m[2023-06-12 11:17:00,582][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:155][m - -Dio.netty.allocator.numDirectArenas: 32
+[34m[2023-06-12 11:17:00,582][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:155][m - -Dio.netty.allocator.numDirectArenas: 32
+[34m[2023-06-12 11:17:00,582][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:157][m - -Dio.netty.allocator.pageSize: 8192
+[34m[2023-06-12 11:17:00,582][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:157][m - -Dio.netty.allocator.pageSize: 8192
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:162][m - -Dio.netty.allocator.maxOrder: 11
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:162][m - -Dio.netty.allocator.maxOrder: 11
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:166][m - -Dio.netty.allocator.chunkSize: 16777216
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:166][m - -Dio.netty.allocator.chunkSize: 16777216
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:167][m - -Dio.netty.allocator.smallCacheSize: 256
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:167][m - -Dio.netty.allocator.smallCacheSize: 256
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:168][m - -Dio.netty.allocator.normalCacheSize: 64
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:168][m - -Dio.netty.allocator.normalCacheSize: 64
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:169][m - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:169][m - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:170][m - -Dio.netty.allocator.cacheTrimInterval: 8192
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:170][m - -Dio.netty.allocator.cacheTrimInterval: 8192
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:171][m - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:171][m - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:172][m - -Dio.netty.allocator.useCacheForAllThreads: true
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:172][m - -Dio.netty.allocator.useCacheForAllThreads: true
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:173][m - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[34m[2023-06-12 11:17:00,583][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[PooledByteBufAllocator.java:173][m - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[34m[2023-06-12 11:17:00,595][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ByteBufUtil.java:87][m - -Dio.netty.allocator.type: pooled
+[34m[2023-06-12 11:17:00,595][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ByteBufUtil.java:87][m - -Dio.netty.allocator.type: pooled
+[34m[2023-06-12 11:17:00,595][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ByteBufUtil.java:96][m - -Dio.netty.threadLocalDirectBufferSize: 0
+[34m[2023-06-12 11:17:00,595][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ByteBufUtil.java:96][m - -Dio.netty.threadLocalDirectBufferSize: 0
+[34m[2023-06-12 11:17:00,595][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ByteBufUtil.java:99][m - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[34m[2023-06-12 11:17:00,595][m [32m[DEBUG][m [35m[Thread-10 ][m[31m[ByteBufUtil.java:99][m - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[34m[2023-06-12 11:17:00,601][m [32m[ERROR][m [35m[Thread-10 ][m[31m[EmbedServer.java:93][m - >>>>>>>>>>> xxl-job remoting server error.
+java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:555)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:134)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:550)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:506)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:491)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:248)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[34m[2023-06-12 11:17:00,601][m [32m[ERROR][m [35m[Thread-10 ][m[31m[EmbedServer.java:93][m - >>>>>>>>>>> xxl-job remoting server error.
+java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:555)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:134)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:550)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:506)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:491)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:248)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[34m[2023-06-12 11:17:00,723][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1066][m - HikariPool-1 - configuration:
+[34m[2023-06-12 11:17:00,723][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1066][m - HikariPool-1 - configuration:
+[34m[2023-06-12 11:17:00,725][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - allowPoolSuspension.............false
+[34m[2023-06-12 11:17:00,725][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - allowPoolSuspension.............false
+[34m[2023-06-12 11:17:00,725][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - autoCommit......................true
+[34m[2023-06-12 11:17:00,725][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - autoCommit......................true
+[34m[2023-06-12 11:17:00,726][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - catalog.........................none
+[34m[2023-06-12 11:17:00,726][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - catalog.........................none
+[34m[2023-06-12 11:17:00,726][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - connectionInitSql...............none
+[34m[2023-06-12 11:17:00,726][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - connectionInitSql...............none
+[34m[2023-06-12 11:17:00,726][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - connectionTestQuery.............none
+[34m[2023-06-12 11:17:00,726][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - connectionTestQuery.............none
+[34m[2023-06-12 11:17:00,726][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - connectionTimeout...............30000
+[34m[2023-06-12 11:17:00,726][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - connectionTimeout...............30000
+[34m[2023-06-12 11:17:00,726][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - dataSource......................none
+[34m[2023-06-12 11:17:00,726][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - dataSource......................none
+[34m[2023-06-12 11:17:00,726][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - dataSourceClassName.............none
+[34m[2023-06-12 11:17:00,726][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - dataSourceClassName.............none
+[34m[2023-06-12 11:17:00,727][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - dataSourceJNDI..................none
+[34m[2023-06-12 11:17:00,727][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - dataSourceJNDI..................none
+[34m[2023-06-12 11:17:00,727][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - dataSourceProperties............{password=<masked>}
+[34m[2023-06-12 11:17:00,727][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - dataSourceProperties............{password=<masked>}
+[34m[2023-06-12 11:17:00,727][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - driverClassName................."com.mysql.cj.jdbc.Driver"
+[34m[2023-06-12 11:17:00,727][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - driverClassName................."com.mysql.cj.jdbc.Driver"
+[34m[2023-06-12 11:17:00,727][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - exceptionOverrideClassName......none
+[34m[2023-06-12 11:17:00,727][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - exceptionOverrideClassName......none
+[34m[2023-06-12 11:17:00,728][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - healthCheckProperties...........{}
+[34m[2023-06-12 11:17:00,728][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - healthCheckProperties...........{}
+[34m[2023-06-12 11:17:00,728][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - healthCheckRegistry.............none
+[34m[2023-06-12 11:17:00,728][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - healthCheckRegistry.............none
+[34m[2023-06-12 11:17:00,728][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - idleTimeout.....................600000
+[34m[2023-06-12 11:17:00,728][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - idleTimeout.....................600000
+[34m[2023-06-12 11:17:00,728][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - initializationFailTimeout.......1
+[34m[2023-06-12 11:17:00,728][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - initializationFailTimeout.......1
+[34m[2023-06-12 11:17:00,728][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - isolateInternalQueries..........false
+[34m[2023-06-12 11:17:00,728][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - isolateInternalQueries..........false
+[34m[2023-06-12 11:17:00,728][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - jdbcUrl.........................jdbc:mysql://localhost:3309/xc_media?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+[34m[2023-06-12 11:17:00,728][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - jdbcUrl.........................jdbc:mysql://localhost:3309/xc_media?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+[34m[2023-06-12 11:17:00,729][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - leakDetectionThreshold..........0
+[34m[2023-06-12 11:17:00,729][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - leakDetectionThreshold..........0
+[34m[2023-06-12 11:17:00,729][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - maxLifetime.....................1800000
+[34m[2023-06-12 11:17:00,729][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - maxLifetime.....................1800000
+[34m[2023-06-12 11:17:00,729][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - maximumPoolSize.................10
+[34m[2023-06-12 11:17:00,729][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - maximumPoolSize.................10
+[34m[2023-06-12 11:17:00,729][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - metricRegistry..................none
+[34m[2023-06-12 11:17:00,729][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - metricRegistry..................none
+[34m[2023-06-12 11:17:00,729][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - metricsTrackerFactory...........none
+[34m[2023-06-12 11:17:00,729][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - metricsTrackerFactory...........none
+[34m[2023-06-12 11:17:00,730][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - minimumIdle.....................10
+[34m[2023-06-12 11:17:00,730][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - minimumIdle.....................10
+[34m[2023-06-12 11:17:00,730][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - password........................<masked>
+[34m[2023-06-12 11:17:00,730][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - password........................<masked>
+[34m[2023-06-12 11:17:00,730][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - poolName........................"HikariPool-1"
+[34m[2023-06-12 11:17:00,730][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - poolName........................"HikariPool-1"
+[34m[2023-06-12 11:17:00,730][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - readOnly........................false
+[34m[2023-06-12 11:17:00,730][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - readOnly........................false
+[34m[2023-06-12 11:17:00,730][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - registerMbeans..................false
+[34m[2023-06-12 11:17:00,730][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - registerMbeans..................false
+[34m[2023-06-12 11:17:00,731][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - scheduledExecutor...............none
+[34m[2023-06-12 11:17:00,731][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - scheduledExecutor...............none
+[34m[2023-06-12 11:17:00,731][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - schema..........................none
+[34m[2023-06-12 11:17:00,731][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - schema..........................none
+[34m[2023-06-12 11:17:00,731][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - threadFactory...................internal
+[34m[2023-06-12 11:17:00,731][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - threadFactory...................internal
+[34m[2023-06-12 11:17:00,731][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - transactionIsolation............default
+[34m[2023-06-12 11:17:00,731][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - transactionIsolation............default
+[34m[2023-06-12 11:17:00,731][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - username........................"root"
+[34m[2023-06-12 11:17:00,731][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - username........................"root"
+[34m[2023-06-12 11:17:00,731][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - validationTimeout...............5000
+[34m[2023-06-12 11:17:00,731][m [32m[DEBUG][m [35m[main      ][m[31m[HikariConfig.java:1098][m - validationTimeout...............5000
+[34m[2023-06-12 11:17:00,732][m [32m[INFO ][m [35m[main      ][m[31m[HikariDataSource.java:110][m - HikariPool-1 - Starting...
+[34m[2023-06-12 11:17:00,732][m [32m[INFO ][m [35m[main      ][m[31m[HikariDataSource.java:110][m - HikariPool-1 - Starting...
+[34m[2023-06-12 11:17:02,052][m [32m[DEBUG][m [35m[main      ][m[31m[HikariPool.java:564][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19b0a9f2
+[34m[2023-06-12 11:17:02,052][m [32m[DEBUG][m [35m[main      ][m[31m[HikariPool.java:564][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19b0a9f2
+[34m[2023-06-12 11:17:02,053][m [32m[INFO ][m [35m[main      ][m[31m[HikariDataSource.java:123][m - HikariPool-1 - Start completed.
+[34m[2023-06-12 11:17:02,053][m [32m[INFO ][m [35m[main      ][m[31m[HikariDataSource.java:123][m - HikariPool-1 - Start completed.
+[34m[2023-06-12 11:17:02,057][m [32m[DEBUG][m [35m[main      ][m[31m[BaseJdbcLogger.java:137][m - ==>  Preparing: SELECT * FROM media_process WHERE id%?=? AND (`status`=1 OR `status`=3) AND fail_count<3 LIMIT ?
+[34m[2023-06-12 11:17:02,057][m [32m[DEBUG][m [35m[main      ][m[31m[BaseJdbcLogger.java:137][m - ==>  Preparing: SELECT * FROM media_process WHERE id%?=? AND (`status`=1 OR `status`=3) AND fail_count<3 LIMIT ?
+[34m[2023-06-12 11:17:02,080][m [32m[DEBUG][m [35m[main      ][m[31m[BaseJdbcLogger.java:137][m - ==> Parameters: 1(Integer), 0(Integer), 2(Integer)
+[34m[2023-06-12 11:17:02,080][m [32m[DEBUG][m [35m[main      ][m[31m[BaseJdbcLogger.java:137][m - ==> Parameters: 1(Integer), 0(Integer), 2(Integer)
+[34m[2023-06-12 11:17:02,104][m [32m[DEBUG][m [35m[main      ][m[31m[BaseJdbcLogger.java:137][m - <==      Total: 1
+[34m[2023-06-12 11:17:02,104][m [32m[DEBUG][m [35m[main      ][m[31m[BaseJdbcLogger.java:137][m - <==      Total: 1
+[34m[2023-06-12 11:17:02,118][m [32m[WARN ][m [35m[Thread-16 ][m[31m[NotifyCenter.java:145][m - [NotifyCenter] Start destroying Publisher
+[34m[2023-06-12 11:17:02,118][m [32m[WARN ][m [35m[Thread-1  ][m[31m[HttpClientBeanHolder.java:108][m - [HttpClientBeanHolder] Start destroying common HttpClient
+[34m[2023-06-12 11:17:02,118][m [32m[WARN ][m [35m[Thread-1  ][m[31m[HttpClientBeanHolder.java:108][m - [HttpClientBeanHolder] Start destroying common HttpClient
+[34m[2023-06-12 11:17:02,118][m [32m[WARN ][m [35m[Thread-16 ][m[31m[NotifyCenter.java:145][m - [NotifyCenter] Start destroying Publisher
+[34m[2023-06-12 11:17:02,118][m [32m[WARN ][m [35m[Thread-16 ][m[31m[NotifyCenter.java:162][m - [NotifyCenter] Destruction of the end
+[34m[2023-06-12 11:17:02,118][m [32m[WARN ][m [35m[Thread-16 ][m[31m[NotifyCenter.java:162][m - [NotifyCenter] Destruction of the end
+[34m[2023-06-12 11:17:02,118][m [32m[WARN ][m [35m[Thread-1  ][m[31m[HttpClientBeanHolder.java:114][m - [HttpClientBeanHolder] Destruction of the end
+[34m[2023-06-12 11:17:02,118][m [32m[WARN ][m [35m[Thread-1  ][m[31m[HttpClientBeanHolder.java:114][m - [HttpClientBeanHolder] Destruction of the end
+[34m[2023-06-12 11:17:02,119][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[ExecutorConfigurationSupport.java:218][m - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+[34m[2023-06-12 11:17:02,119][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[ExecutorConfigurationSupport.java:218][m - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+[34m[2023-06-12 11:17:02,166][m [32m[DEBUG][m [35m[HikariPool-1 housekeeper][m[31m[HikariPool.java:421][m - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+[34m[2023-06-12 11:17:02,166][m [32m[DEBUG][m [35m[HikariPool-1 housekeeper][m[31m[HikariPool.java:421][m - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+[34m[2023-06-12 11:17:03,175][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@139556e3
+[34m[2023-06-12 11:17:03,175][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@139556e3
+[34m[2023-06-12 11:17:04,388][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22cca733
+[34m[2023-06-12 11:17:04,388][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22cca733
+[34m[2023-06-12 11:17:04,392][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73baa9ac
+[34m[2023-06-12 11:17:04,392][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73baa9ac
+[34m[2023-06-12 11:17:05,610][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1522a7fb
+[34m[2023-06-12 11:17:05,610][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1522a7fb
+[34m[2023-06-12 11:17:06,621][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77f436bf
+[34m[2023-06-12 11:17:06,621][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77f436bf
+[34m[2023-06-12 11:17:06,625][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26152c6e
+[34m[2023-06-12 11:17:06,625][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26152c6e
+[34m[2023-06-12 11:17:07,844][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@620d01b6
+[34m[2023-06-12 11:17:07,844][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@620d01b6
+[34m[2023-06-12 11:17:09,066][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8d4f36e
+[34m[2023-06-12 11:17:09,066][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8d4f36e
+[34m[2023-06-12 11:17:09,071][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ed7e834
+[34m[2023-06-12 11:17:09,071][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:728][m - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ed7e834
+[34m[2023-06-12 11:17:09,071][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:421][m - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+[34m[2023-06-12 11:17:09,071][m [32m[DEBUG][m [35m[HikariPool-1 connection adder][m[31m[HikariPool.java:421][m - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+[34m[2023-06-12 11:17:10,232][m [32m[WARN ][m [35m[SpringContextShutdownHook][m[31m[NamingHttpClientManager.java:72][m - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[34m[2023-06-12 11:17:10,232][m [32m[WARN ][m [35m[SpringContextShutdownHook][m[31m[NamingHttpClientManager.java:72][m - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[34m[2023-06-12 11:17:10,232][m [32m[WARN ][m [35m[SpringContextShutdownHook][m[31m[NamingHttpClientManager.java:79][m - [NamingHttpClientManager] Destruction of the end
+[34m[2023-06-12 11:17:10,232][m [32m[WARN ][m [35m[SpringContextShutdownHook][m[31m[NamingHttpClientManager.java:79][m - [NamingHttpClientManager] Destruction of the end
+[34m[2023-06-12 11:17:10,233][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[ExecutorConfigurationSupport.java:218][m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m[2023-06-12 11:17:10,233][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[ExecutorConfigurationSupport.java:218][m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m[2023-06-12 11:17:10,234][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[EmbedServer.java:117][m - >>>>>>>>>>> xxl-job remoting server destroy success.
+[34m[2023-06-12 11:17:10,234][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[EmbedServer.java:117][m - >>>>>>>>>>> xxl-job remoting server destroy success.
+[34m[2023-06-12 11:17:10,235][m [32m[INFO ][m [35m[xxl-job, executor JobLogFileCleanThread][m[31m[JobLogFileCleanThread.java:99][m - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+[34m[2023-06-12 11:17:10,235][m [32m[INFO ][m [35m[xxl-job, executor JobLogFileCleanThread][m[31m[JobLogFileCleanThread.java:99][m - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+[34m[2023-06-12 11:17:10,235][m [32m[INFO ][m [35m[xxl-job, executor TriggerCallbackThread][m[31m[TriggerCallbackThread.java:98][m - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+[34m[2023-06-12 11:17:10,235][m [32m[INFO ][m [35m[xxl-job, executor TriggerCallbackThread][m[31m[TriggerCallbackThread.java:98][m - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+[34m[2023-06-12 11:17:10,235][m [32m[INFO ][m [35m[Thread-9  ][m[31m[TriggerCallbackThread.java:128][m - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+[34m[2023-06-12 11:17:10,235][m [32m[INFO ][m [35m[Thread-9  ][m[31m[TriggerCallbackThread.java:128][m - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+[34m[2023-06-12 11:17:10,236][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[HikariDataSource.java:350][m - HikariPool-1 - Shutdown initiated...
+[34m[2023-06-12 11:17:10,236][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[HikariDataSource.java:350][m - HikariPool-1 - Shutdown initiated...
+[34m[2023-06-12 11:17:10,236][m [32m[DEBUG][m [35m[SpringContextShutdownHook][m[31m[HikariPool.java:421][m - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+[34m[2023-06-12 11:17:10,236][m [32m[DEBUG][m [35m[SpringContextShutdownHook][m[31m[HikariPool.java:421][m - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+[34m[2023-06-12 11:17:10,237][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@19b0a9f2: (connection evicted)
+[34m[2023-06-12 11:17:10,237][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@19b0a9f2: (connection evicted)
+[34m[2023-06-12 11:17:10,241][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@139556e3: (connection evicted)
+[34m[2023-06-12 11:17:10,241][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@139556e3: (connection evicted)
+[34m[2023-06-12 11:17:10,241][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@22cca733: (connection evicted)
+[34m[2023-06-12 11:17:10,241][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@22cca733: (connection evicted)
+[34m[2023-06-12 11:17:10,241][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@73baa9ac: (connection evicted)
+[34m[2023-06-12 11:17:10,241][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@73baa9ac: (connection evicted)
+[34m[2023-06-12 11:17:10,241][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1522a7fb: (connection evicted)
+[34m[2023-06-12 11:17:10,241][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1522a7fb: (connection evicted)
+[34m[2023-06-12 11:17:10,242][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@77f436bf: (connection evicted)
+[34m[2023-06-12 11:17:10,242][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@77f436bf: (connection evicted)
+[34m[2023-06-12 11:17:10,242][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@26152c6e: (connection evicted)
+[34m[2023-06-12 11:17:10,242][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@26152c6e: (connection evicted)
+[34m[2023-06-12 11:17:10,242][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@620d01b6: (connection evicted)
+[34m[2023-06-12 11:17:10,242][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@620d01b6: (connection evicted)
+[34m[2023-06-12 11:17:10,242][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@8d4f36e: (connection evicted)
+[34m[2023-06-12 11:17:10,242][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@8d4f36e: (connection evicted)
+[34m[2023-06-12 11:17:10,243][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4ed7e834: (connection evicted)
+[34m[2023-06-12 11:17:10,243][m [32m[DEBUG][m [35m[HikariPool-1 connection closer][m[31m[PoolBase.java:134][m - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4ed7e834: (connection evicted)
+[34m[2023-06-12 11:17:10,243][m [32m[DEBUG][m [35m[SpringContextShutdownHook][m[31m[HikariPool.java:421][m - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+[34m[2023-06-12 11:17:10,243][m [32m[DEBUG][m [35m[SpringContextShutdownHook][m[31m[HikariPool.java:421][m - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+[34m[2023-06-12 11:17:10,243][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[HikariDataSource.java:352][m - HikariPool-1 - Shutdown completed.
+[34m[2023-06-12 11:17:10,243][m [32m[INFO ][m [35m[SpringContextShutdownHook][m[31m[HikariDataSource.java:352][m - HikariPool-1 - Shutdown completed.

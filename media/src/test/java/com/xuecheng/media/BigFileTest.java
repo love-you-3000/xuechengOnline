@@ -1,5 +1,7 @@
 package com.xuecheng.media;
 
+import com.xuecheng.media.entity.MediaProcess;
+import com.xuecheng.media.mapper.MediaProcessMapper;
 import io.minio.ComposeObjectArgs;
 import io.minio.ComposeSource;
 import io.minio.MinioClient;
@@ -7,6 +9,8 @@ import io.minio.UploadObjectArgs;
 import io.minio.errors.*;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -25,7 +29,12 @@ import java.util.stream.Stream;
  * @date: 2023/6/8
  **/
 
+@SpringBootTest
 public class BigFileTest {
+
+
+    @Autowired
+    MediaProcessMapper processMapper;
     // 分开测试
     public static final MinioClient minioClient =
             MinioClient.builder()
@@ -107,5 +116,12 @@ public class BigFileTest {
     public void testMinioMerge() throws ServerException, InsufficientDataException, ErrorResponseException, IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
         List<ComposeSource> sourceList = Stream.iterate(0, i -> i + 1).limit(26).map(i -> ComposeSource.builder().bucket("testbucket").object("chunk/" + i).build()).collect(Collectors.toList());
         minioClient.composeObject(ComposeObjectArgs.builder().bucket("testbucket").sources(sourceList).object("merge01.mp4").build());
+    }
+
+    @Test
+    public void testMapper()
+    {
+        List<MediaProcess> mediaProcessList = processMapper.selectByShardIndex(1, 0, 2);
+        System.out.println(mediaProcessList);
     }
 }
