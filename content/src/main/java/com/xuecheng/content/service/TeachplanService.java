@@ -26,5 +26,7 @@ public interface TeachplanService extends IService<Teachplan> {
     void deleteTeachPlan(Long teachPlanId);
 
     void associationMedia(BindTeachplanMediaDto bindTeachplanMediaDto);
+
+    void DeleteMedia(Long teachplanId, String mediaId);
 }
 

@@ -162,6 +162,15 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
         teachplanMediaMapper.insert(teachplanMedia);
     }
 
+    @Override
+    public void DeleteMedia(Long teachplanId, String mediaId) {
+        LambdaQueryWrapper<TeachplanMedia> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(TeachplanMedia::getTeachplanId,teachplanId);
+        wrapper.eq(TeachplanMedia::getMediaId,mediaId);
+        int delete = teachplanMediaMapper.delete(wrapper);
+        if(delete<=0) XuechengException.cast("删除绑定失败！");
+    }
+
     private void changeOrderBy(Long courseId, Long parentId, Integer orderBy) {
         // 所有同级课程，序号比orderBy大的全部减1
         // todo 该逻辑对数据库操作太频繁，后期估计要调整排序逻辑
