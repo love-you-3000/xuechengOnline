@@ -18,5 +18,7 @@ public interface CoursePublishService extends IService<CoursePublish> {
      * @Description: 获取课程发布的所有相关信息
      * @Date: 9:41 2023/6/13
     **/
-    public CoursePreviewDto getCoursePreviewInfo(Long courseId);
+    CoursePreviewDto getCoursePreviewInfo(Long courseId);
+
+    void commitAudit(Long companyId, Long courseId);
 }
