@@ -18,7 +18,7 @@ spring:
           - data-id: logging-${spring.profiles.active}.yaml
             group: xuecheng-common
             refresh: true
-          - data-id: thymeleaf-dev.yaml
+          - data-id: freemarker-dev.yaml
             group: xuecheng-common
             refresh: true
 

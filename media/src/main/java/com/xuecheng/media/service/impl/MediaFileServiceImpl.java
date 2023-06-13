@@ -106,7 +106,7 @@ public class MediaFileServiceImpl implements MediaFileService {
         if (!result)
             XuechengException.cast("上传文件失败！");
         mediaFiles.setFileSize(file.length());
-        selfProxy.addMediaFilesToDb(companyId, mediaFiles, videoBucket, fileMd5, uploadPath);
+        selfProxy.addMediaFilesToDb(companyId, mediaFiles, fileBucket, fileMd5, uploadPath);
         BeanUtils.copyProperties(mediaFiles, dto);
         return dto;
     }
