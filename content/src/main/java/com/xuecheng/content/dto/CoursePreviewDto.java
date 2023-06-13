@@ -11,7 +11,6 @@ import java.util.List;
  * @description: 用于课程预览的模型类
  * @date: 2023/6/13
  **/
-
 @Data
 public class CoursePreviewDto {
 
