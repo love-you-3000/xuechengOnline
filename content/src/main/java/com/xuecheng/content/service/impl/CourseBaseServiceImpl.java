@@ -203,7 +203,7 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
         }
         BeanUtils.copyProperties(dto, courseBase);
         courseBase.setChangeDate(LocalDateTime.now());
-        if (courseBaseMapper.insert(courseBase) <= 0) {
+        if (courseBaseMapper.updateById(courseBase) <= 0) {
             throw new RuntimeException("更新课程失败！");
         }
         CourseMarket courseMarket = courseMarketMapper.selectById(courseId);

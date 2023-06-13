@@ -73,7 +73,7 @@ public class MediaFileServiceImpl implements MediaFileService {
 
         //构建查询条件对象
         LambdaQueryWrapper<MediaFiles> queryWrapper = new LambdaQueryWrapper<>();
-
+        queryWrapper.like(MediaFiles::getFilename,queryMediaParamsDto.getFilename());
         //分页对象
         Page<MediaFiles> page = new Page<>(pageParams.getPageNo(), pageParams.getPageSize());
         // 查询数据内容获得结果
@@ -143,7 +143,7 @@ public class MediaFileServiceImpl implements MediaFileService {
         String filename = mediaFiles.getFilename();
         String extension = filename.substring(filename.lastIndexOf("."));
         String mimeType = getMimeType(extension);
-        if(mimeType.equals("video/x-msvideo")){
+        if (mimeType.equals("video/x-msvideo")) {
             MediaProcess mediaProcess = new MediaProcess();
             BeanUtils.copyProperties(mediaFiles, mediaProcess);
             mediaProcess.setCreateDate(LocalDateTime.now());
@@ -170,6 +170,12 @@ public class MediaFileServiceImpl implements MediaFileService {
         return RestResponse.success(true);
     }
 
+
+    /**
+     * @Author: 朱江
+     * @Description: 检查分块是否存在，false不存在，true存在
+     * @Date: 11:39 2023/6/13
+     **/
     @Override
     public RestResponse<Boolean> checkChunk(String fileMd5, int chunkIndex) {
         RestResponse<Boolean> booleanRestResponse = checkFile(fileMd5);
@@ -178,20 +184,21 @@ public class MediaFileServiceImpl implements MediaFileService {
         String chunkFileFolderPath = getChunkFileFolderPath(fileMd5);
         //得到分块文件的路径
         String chunkFilePath = chunkFileFolderPath + chunkIndex;
+        InputStream fileInputStream;
         //文件流
         try {
-            minioClient.statObject(
-                    StatObjectArgs.builder()
+            fileInputStream = minioClient.getObject(
+                    GetObjectArgs.builder()
                             .bucket(videoBucket)
                             .object(chunkFilePath)
                             .build());
-        } catch (Exception e) {
-            e.printStackTrace();
-            return RestResponse.success(false);
+            if (fileInputStream != null) {
+                //分块已存在
+                return RestResponse.success(true);
+            }
+        } catch (Exception ignored) {
         }
-        //分块未存在
-        return RestResponse.success(true);
-
+        return RestResponse.success(false);
     }
 
     @Override
