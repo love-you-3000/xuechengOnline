@@ -120,4 +120,44 @@ public class CoursePublishServiceImpl extends ServiceImpl<CoursePublishMapper, C
         courseBase.setAuditStatus("202003");
         courseBaseService.getBaseMapper().updateById(courseBase);
     }
+
+    /**
+     * @Author: 朱江
+     * @Description: 课程发布服务，需要从预发布表读取数据到发布表，并写入消息处理表
+     * @Date: 15:33 2023/6/14
+     **/
+    @Transactional
+    @Override
+    public void publish(Long companyId, Long courseId) {
+        CoursePublishPre coursePublishPre = coursePublishPreMapper.selectById(courseId);
+        if (coursePublishPre == null)
+            XuechengException.cast("请先提交课程审核，审核通过才可以发布");
+        if (!coursePublishPre.getCompanyId().equals(companyId)) {
+            XuechengException.cast("不允许提交其它机构的课程。");
+        }
+        //课程审核状态
+        String auditStatus = coursePublishPre.getStatus();
+        //审核通过方可发布
+        if (!"202004".equals(auditStatus)) {
+            XuechengException.cast("操作失败，课程审核通过方可发布。");
+        }
+
+        // 保存课程发布信息
+        CoursePublish coursePublish = new CoursePublish();
+        BeanUtils.copyProperties(coursePublishPre, coursePublish);
+        coursePublish.setStatus("203002");
+        boolean isExist = getBaseMapper().selectById(courseId) != null;
+        if (isExist) baseMapper.updateById(coursePublish);
+        else baseMapper.insert(coursePublish);
+
+        //更新课程基本表的发布状态
+        CourseBase courseBase = courseBaseService.getBaseMapper().selectById(courseId);
+        courseBase.setStatus("203002");
+        courseBaseService.getBaseMapper().updateById(courseBase);
+
+        //todo 保存消息表
+
+        // 删除预发布表中的对应课程信息
+        coursePublishPreMapper.deleteById(courseId);
+    }
 }

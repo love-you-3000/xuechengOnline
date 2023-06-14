@@ -21,4 +21,6 @@ public interface CoursePublishService extends IService<CoursePublish> {
     CoursePreviewDto getCoursePreviewInfo(Long courseId);
 
     void commitAudit(Long companyId, Long courseId);
+
+    void publish(Long companyId, Long courseId);
 }
