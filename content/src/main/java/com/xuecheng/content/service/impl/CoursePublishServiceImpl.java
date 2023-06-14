@@ -2,6 +2,7 @@ package com.xuecheng.content.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.xuecheng.base.exception.CommonError;
 import com.xuecheng.base.exception.XuechengException;
 import com.xuecheng.content.dto.CourseBaseInfoDto;
 import com.xuecheng.content.dto.CoursePreviewDto;
@@ -17,6 +18,8 @@ import com.xuecheng.content.service.CourseBaseService;
 import com.xuecheng.content.service.CoursePublishService;
 import com.xuecheng.content.service.CourseTeacherService;
 import com.xuecheng.content.service.TeachplanService;
+import com.xuecheng.messagesdk.entity.MqMessage;
+import com.xuecheng.messagesdk.service.MqMessageService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -52,6 +55,9 @@ public class CoursePublishServiceImpl extends ServiceImpl<CoursePublishMapper, C
 
     @Autowired
     CoursePublishPreMapper coursePublishPreMapper;
+
+    @Autowired
+    MqMessageService messageService;
 
     @Override
     public CoursePreviewDto getCoursePreviewInfo(Long courseId) {
@@ -156,7 +162,8 @@ public class CoursePublishServiceImpl extends ServiceImpl<CoursePublishMapper, C
         courseBaseService.getBaseMapper().updateById(courseBase);
 
         //todo 保存消息表
-
+        MqMessage message = messageService.addMessage("course_publish", String.valueOf(courseId), null, null);
+        if (message == null) XuechengException.cast(CommonError.UNKNOWN_ERROR);
         // 删除预发布表中的对应课程信息
         coursePublishPreMapper.deleteById(courseId);
     }
