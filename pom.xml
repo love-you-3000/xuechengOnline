@@ -14,6 +14,8 @@
         <module>system</module>
         <module>gateway</module>
         <module>media</module>
+        <module>message-sdk</module>
+        <module>code-generator</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
