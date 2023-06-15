@@ -20,8 +20,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class SampleXxlJob {
     private static Logger logger = LoggerFactory.getLogger(SampleXxlJob.class);
-
-
     /**
      * 1、简单任务示例（Bean模式）
      */
