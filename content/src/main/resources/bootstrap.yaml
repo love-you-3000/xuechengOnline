@@ -21,6 +21,9 @@ spring:
           - data-id: freemarker-dev.yaml
             group: xuecheng-common
             refresh: true
+          - data-id: feign-dev.yaml
+            group: xuecheng-common
+            refresh: true
 
 
 
