@@ -6,9 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.ConfigurableEnvironment;
-import org.springframework.validation.annotation.Validated;
 
 /**
  * @className: ContentApplication
@@ -21,6 +21,7 @@ import org.springframework.validation.annotation.Validated;
 @ComponentScan("com.xuecheng")
 @MapperScan("com.xuecheng.content.mapper")
 @EnableSwagger2Doc
+@EnableFeignClients(basePackages = {"com.xuecheng.content.feignclient"})
 public class ContentApplication {
     private static final Logger LOG = LoggerFactory.getLogger(ContentApplication.class);
     public static void main(String[] args) {
