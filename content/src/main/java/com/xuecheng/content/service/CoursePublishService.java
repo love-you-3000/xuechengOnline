@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.xuecheng.content.dto.CoursePreviewDto;
 import com.xuecheng.content.entity.CoursePublish;
 
+import java.io.File;
+
 /**
  * <p>
  * 课程发布 服务类
@@ -23,4 +25,13 @@ public interface CoursePublishService extends IService<CoursePublish> {
     void commitAudit(Long companyId, Long courseId);
 
     void publish(Long companyId, Long courseId);
+
+    /**
+     * @Author: 朱江
+     * @Description: 课程静态化
+     * @Date: 16:15 2023/6/15
+    **/
+    File generateCourseHtml(Long courseId);
+
+    void  uploadCourseHtml(Long courseId,File file);
 }

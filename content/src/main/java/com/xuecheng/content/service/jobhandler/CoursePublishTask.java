@@ -1,12 +1,16 @@
 package com.xuecheng.content.service.jobhandler;
 
+import com.xuecheng.content.service.CoursePublishService;
 import com.xuecheng.messagesdk.entity.MqMessage;
 import com.xuecheng.messagesdk.service.MessageProcessAbstract;
 import com.xuecheng.messagesdk.service.MqMessageService;
 import com.xxl.job.core.context.XxlJobHelper;
 import com.xxl.job.core.handler.annotation.XxlJob;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.io.File;
 
 /**
  * @className: CoursePublishTask
@@ -18,6 +22,9 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class CoursePublishTask extends MessageProcessAbstract {
+
+    @Autowired
+    CoursePublishService coursePublishService;
 
     @XxlJob("CoursePublishJobHandler")
     public void coursePublishJobHandler() {
@@ -35,7 +42,7 @@ public class CoursePublishTask extends MessageProcessAbstract {
         saveCourseEs(mqMessage, courseId);
         saveCourseRedis(mqMessage, courseId);
         generateCourseHtml(mqMessage, courseId);
-        return false;
+        return true;
 
     }
 
@@ -65,6 +72,7 @@ public class CoursePublishTask extends MessageProcessAbstract {
     }
 
     private void generateCourseHtml(MqMessage mqMessage, Long courseId) {
+        log.debug("开始进行课程静态化,课程id:{}", courseId);
         // 保证幂等性
         Long taskId = mqMessage.getId();
         MqMessageService mqMessageService = this.getMqMessageService();
@@ -74,6 +82,10 @@ public class CoursePublishTask extends MessageProcessAbstract {
             return;
         }
         // 保存静态页面到minio
-        mqMessageService.completedStageThree(taskId);
+        File file = coursePublishService.generateCourseHtml(courseId);
+        if (file != null) {
+            coursePublishService.uploadCourseHtml(courseId, file);
+            mqMessageService.completedStageThree(taskId);
+        }
     }
 }
