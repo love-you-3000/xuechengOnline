@@ -9,6 +9,7 @@ import com.xuecheng.base.exception.XuechengException;
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
 import com.xuecheng.base.model.RestResponse;
+import com.xuecheng.base.utils.StringUtil;
 import com.xuecheng.media.dto.QueryMediaParamsDto;
 import com.xuecheng.media.dto.UploadFileResultDto;
 import com.xuecheng.media.entity.MediaFiles;
@@ -89,7 +90,7 @@ public class MediaFileServiceImpl extends ServiceImpl<MediaFilesMapper, MediaFil
     }
 
     @Override
-    public UploadFileResultDto uploadFile(Long companyId, MediaFiles mediaFiles, String localFilePath) {
+    public UploadFileResultDto uploadFile(Long companyId, MediaFiles mediaFiles, String localFilePath, String objectName) {
         UploadFileResultDto dto = new UploadFileResultDto();
         File file = new File(localFilePath); // 用户上传文件的本地备份
         if (!file.exists()) XuechengException.cast("文件不存在！");
@@ -102,7 +103,10 @@ public class MediaFileServiceImpl extends ServiceImpl<MediaFilesMapper, MediaFil
         }
         String filename = mediaFiles.getFilename();
         String extension = filename.substring(filename.lastIndexOf("."));
-        String uploadPath = getDefaultFoldPath() + fileMd5 + extension;
+        String uploadPath;
+        if (StringUtil.isEmpty(objectName)) {
+            uploadPath = getDefaultFoldPath() + fileMd5 + extension;
+        } else uploadPath = objectName;
         boolean result = uploadFileToMinio(fileBucket, extension, uploadPath, localFilePath);
         if (!result)
             XuechengException.cast("上传文件失败！");

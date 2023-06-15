@@ -28,7 +28,7 @@ public interface MediaFileService extends IService<MediaFiles> {
      */
     PageResult<MediaFiles> queryMediaFiles(Long companyId, PageParams pageParams, QueryMediaParamsDto queryMediaParamsDto);
 
-    UploadFileResultDto uploadFile(Long companyId, MediaFiles mediaFiles, String localFilePath);
+    UploadFileResultDto uploadFile(Long companyId, MediaFiles mediaFiles, String localFilePath, String objectName);
 
     void addMediaFilesToDb(Long companyId, MediaFiles mediaFiles, String bucket, String fileMd5, String uploadPath);
 

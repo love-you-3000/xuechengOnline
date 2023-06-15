@@ -10,10 +10,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -42,7 +39,8 @@ public class MediaFilesController {
 
     @ApiOperation("上传文件")
     @PostMapping(value = "/upload/coursefile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public UploadFileResultDto upload(@RequestPart("filedata") MultipartFile upload) throws IOException {
+    public UploadFileResultDto upload(@RequestPart("filedata") MultipartFile upload, @RequestParam(value = "objectName", required = false) String objectName) throws IOException {
+        // 如果传入objectName，就按照objectName指定的路径存储文件，否则按照默认的年月日存储
         // 返回类型不直接使用MediaFiles是为了程序的可拓展性，如果之后前端要求返回更多字段方便拓展
         Long companyId = 1232141425L;
         MediaFiles mediaFiles = new MediaFiles();
@@ -52,7 +50,7 @@ public class MediaFilesController {
         File tempFile = File.createTempFile("minio", ".temp");
         upload.transferTo(tempFile);
         String absolutePath = tempFile.getAbsolutePath();
-        UploadFileResultDto dto = mediaFileService.uploadFile(companyId, mediaFiles, absolutePath);
+        UploadFileResultDto dto = mediaFileService.uploadFile(companyId, mediaFiles, absolutePath, objectName);
         File f = new File(absolutePath);
         if (f.delete()) {
             System.out.println("删除成功");
