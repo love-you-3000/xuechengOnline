@@ -16,6 +16,7 @@
         <module>media</module>
         <module>message-sdk</module>
         <module>code-generator</module>
+        <module>search</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
