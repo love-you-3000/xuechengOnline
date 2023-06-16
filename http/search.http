@@ -1,7 +1,6 @@
 GET {{search_host}}/search/course/list?pageNo=1&keywords=spring
 Content-Type: application/json
 
-
 ###
 POST {{search_host}}/search/index/course
 Java
@@ -31,6 +30,7 @@ Content-Type: application/json
   "teachmode" : "200002",
   "validDays" : 222
 }
+
 
 
 
