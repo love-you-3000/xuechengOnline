@@ -17,6 +17,7 @@
         <module>message-sdk</module>
         <module>code-generator</module>
         <module>search</module>
+        <module>auth</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
