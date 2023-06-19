@@ -26,6 +26,4 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
            .anyExchange().authenticated()
            .and().csrf().disable().build();
   }
-
-
  }

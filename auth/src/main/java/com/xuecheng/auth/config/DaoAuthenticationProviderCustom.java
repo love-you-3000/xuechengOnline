@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 /**
  * @className: DaoAuthenticationProviderCustom
  * @author: 朱江
- * @description:
+ * @description: 最定义密码认证
  * @date: 2023/6/19
  **/
 @Slf4j

@@ -12,7 +12,7 @@ import java.util.Map;
  * @date 2022/9/29 10:56
  */
 @Data
-public class AuthParamsDto {
+    public class AuthParamsDto {
 
     private String username; //用户名
     private String password; //域  用于扩展
