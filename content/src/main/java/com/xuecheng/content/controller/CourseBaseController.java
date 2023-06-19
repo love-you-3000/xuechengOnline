@@ -13,6 +13,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -48,6 +49,8 @@ public class CourseBaseController {
     @ApiOperation("获取课程基本信息")
     @GetMapping("/course/{id}")
     public CourseBaseInfoDto getCourseBaseById(@PathVariable(value = "id") Long courseId) {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        System.out.println(principal);
         return courseBaseService.getCourseBaseInfoDto(courseId);
     }
 
