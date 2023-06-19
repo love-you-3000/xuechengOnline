@@ -1,2 +1,9 @@
 POST
     {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=authorization_code&code=hKRucX&redirect_uri=http://www.51xuecheng.cn
+
+### 密码模式
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=zhangsan&password=123
+
+
+###
+POST {{auth_host}}/auth/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2ODcxNTAzODgsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6IjM5MGRkN2RjLWZkOGUtNGI0MS1hODQ0LWRiNWQ5NmZmNjMzMiIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.bCJBUCdc5JD57WVZBiCc9gPHVYkQv4pzasm68iPkCJU
