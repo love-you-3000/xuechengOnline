@@ -57,8 +57,8 @@ Content-Type: application/json
 }
 
 ###
-GET {{gateway_host}}/content/course/2
-Content-Type: application/json
+GET {{gateway_host}}/content/course/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmciXSwidXNlcl9uYW1lIjoiemhhbmdzYW4iLCJzY29wZSI6WyJhbGwiXSwiZXhwIjoxNjg3MTUyMzQzLCJhdXRob3JpdGllcyI6WyJwMSJdLCJqdGkiOiIxZGZlNTE4Ni05MmEzLTQ0ODctOGFlOC1kNTdlYmU4YzhlMzUiLCJjbGllbnRfaWQiOiJYY1dlYkFwcCJ9.iuMBn0gi-AkybRmJIwFqXPtDPLA-Ln-qmK6_6-GLcpo
 
 
 ### 修改课程
