@@ -15,6 +15,7 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 @Configuration
 public class TokenConfig {
 
+    // 对称加密
     @Autowired
     TokenStore tokenStore;
 
@@ -34,6 +35,4 @@ public class TokenConfig {
         service.setRefreshTokenValiditySeconds(259200); // 刷新令牌默认有效期3天
         return service;
     }
-
-
 }
