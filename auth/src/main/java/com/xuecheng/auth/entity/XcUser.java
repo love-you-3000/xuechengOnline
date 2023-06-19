@@ -1,4 +1,4 @@
-package com.xuecheng.ucenter.model.po;
+package com.xuecheng.auth.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;

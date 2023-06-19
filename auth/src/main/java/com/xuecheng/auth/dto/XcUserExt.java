@@ -1,6 +1,6 @@
-package com.xuecheng.ucenter.model.dto;
+package com.xuecheng.auth.dto;
 
-import com.xuecheng.ucenter.model.po.XcUser;
+import com.xuecheng.auth.entity.XcUser;
 import lombok.Data;
 
 import java.util.ArrayList;

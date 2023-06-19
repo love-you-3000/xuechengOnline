@@ -1,7 +1,7 @@
 package com.xuecheng.auth.controller;
 
-import com.xuecheng.ucenter.mapper.XcUserMapper;
-import com.xuecheng.ucenter.model.po.XcUser;
+import com.xuecheng.auth.mapper.XcUserMapper;
+import com.xuecheng.auth.entity.XcUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;

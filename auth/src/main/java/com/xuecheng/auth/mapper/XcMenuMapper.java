@@ -1,7 +1,7 @@
-package com.xuecheng.ucenter.mapper;
+package com.xuecheng.auth.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.xuecheng.ucenter.model.po.XcMenu;
+import com.xuecheng.auth.entity.XcMenu;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 

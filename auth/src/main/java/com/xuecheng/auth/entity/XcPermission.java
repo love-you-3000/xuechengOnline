@@ -1,4 +1,4 @@
-package com.xuecheng.ucenter.model.po;
+package com.xuecheng.auth.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -14,24 +14,18 @@ import java.time.LocalDateTime;
  * @author itcast
  */
 @Data
-@TableName("xc_role")
-public class XcRole implements Serializable {
+@TableName("xc_permission")
+public class XcPermission implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private String id;
 
-    private String roleName;
+    private String roleId;
 
-    private String roleCode;
-
-    private String description;
+    private String menuId;
 
     private LocalDateTime createTime;
-
-    private LocalDateTime updateTime;
-
-    private String status;
 
 
 }

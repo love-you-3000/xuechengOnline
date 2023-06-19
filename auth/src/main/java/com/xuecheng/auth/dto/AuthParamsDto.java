@@ -1,4 +1,4 @@
-package com.xuecheng.ucenter.model.dto;
+package com.xuecheng.auth.dto;
 
 import lombok.Data;
 
