@@ -1,0 +1,6 @@
+### 生成验证码
+POST {{checkcode_host}}/checkcode/pic
+
+
+### 校验验证码
+POST {{checkcode_host}}//checkcode/verify?key=checkcode:46c92ea0d9ab4910abc22ff25168fc03&code=rgms
