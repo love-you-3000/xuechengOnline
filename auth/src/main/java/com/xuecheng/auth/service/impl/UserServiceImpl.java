@@ -3,6 +3,8 @@ package com.xuecheng.auth.service.impl;
 import com.alibaba.fastjson.JSON;
 import com.xuecheng.auth.dto.AuthParamsDto;
 import com.xuecheng.auth.dto.XcUserExt;
+import com.xuecheng.auth.entity.XcMenu;
+import com.xuecheng.auth.mapper.XcMenuMapper;
 import com.xuecheng.auth.mapper.XcUserMapper;
 import com.xuecheng.auth.service.AuthService;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +17,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @className: UserServiceImpl
@@ -31,7 +34,11 @@ public class UserServiceImpl implements UserDetailsService {
     XcUserMapper userMapper;
 
     @Autowired
+    XcMenuMapper xcMenuMapper;
+
+    @Autowired
     ApplicationContext applicationContext;
+
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         AuthParamsDto authParamsDto;
@@ -49,9 +56,24 @@ public class UserServiceImpl implements UserDetailsService {
     }
 
     private UserDetails getUserDetail(XcUserExt userExt) {
-        userExt.getPermissions().add("p1");
-        String[] permission = new ArrayList<>(userExt.getPermissions()).toArray(new String[0]);
-        String userJson = JSON.toJSONString(userExt);
-        return User.withUsername(userJson).password(userExt.getPassword()).authorities(permission).build();
+        String password = userExt.getPassword();
+        List<XcMenu> xcMenus = xcMenuMapper.selectPermissionByUserId(userExt.getId());
+        List<String> permissions = new ArrayList<>();
+        if (xcMenus.size() == 0) {
+            //用户权限,如果不加则报Cannot pass a null GrantedAuthority collection
+            permissions.add("p1");
+        } else {
+            xcMenus.forEach(menu -> {
+                permissions.add(menu.getCode());
+            });
+        }
+        //为了安全在令牌中不放密码
+        userExt.setPassword(null);
+        //将user对象转json
+        String userString = JSON.toJSONString(userExt);
+        //将用户权限放在XcUserExt中
+        userExt.setPermissions(permissions);
+        String[] permission = new ArrayList<>(permissions).toArray(new String[0]);
+        return User.withUsername(userString).password(password).authorities(permission).build();
     }
 }

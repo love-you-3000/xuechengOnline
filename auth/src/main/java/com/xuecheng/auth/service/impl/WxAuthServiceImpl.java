@@ -39,7 +39,6 @@ public class WxAuthServiceImpl implements AuthService, WxAuthService {
     @Autowired
     RestTemplate restTemplate;
 
-
     @Autowired
     XcUserRoleMapper xcUserRoleMapper;
 

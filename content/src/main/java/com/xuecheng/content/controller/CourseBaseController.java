@@ -14,6 +14,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,8 +36,12 @@ public class CourseBaseController {
 
     @ApiOperation(value = "课程查询接口")
     @PostMapping("/course/list")
+    @PreAuthorize("hasAnyAuthority('xc_teachmanager_course_list')")
     public PageResult<CourseBase> list(PageParams pageParams, @RequestBody(required = false) QueryCourseParamsDto queryCourseParamsDto) {
-        return courseBaseService.queryCourseBaseList(pageParams, queryCourseParamsDto);
+        SecurityUtil.XcUser user = SecurityUtil.getUser();
+        if (user == null) throw new RuntimeException("获取用户失败，请先登录！");
+        String companyId = user.getCompanyId();
+        return courseBaseService.queryCourseBaseList(Long.parseLong(companyId), pageParams, queryCourseParamsDto);
     }
 
     @ApiOperation("新增课程基础信息")
@@ -66,7 +71,7 @@ public class CourseBaseController {
 
     @ApiOperation("删除课程信息")
     @DeleteMapping("/course/{courseId}")
-    public void modifyCourseBase(@PathVariable Long courseId){
+    public void modifyCourseBase(@PathVariable Long courseId) {
         courseBaseService.deleteCourse(courseId);
     }
 

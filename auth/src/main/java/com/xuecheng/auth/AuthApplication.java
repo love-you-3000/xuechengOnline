@@ -9,7 +9,7 @@ import org.springframework.http.client.OkHttp3ClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableFeignClients(basePackages={"com.xuecheng.*.feignclient"})
+@EnableFeignClients(basePackages = {"com.xuecheng.*.feignclient"})
 @MapperScan("com.xuecheng.auth.mapper")
 public class AuthApplication {
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class AuthApplication {
     }
 
     @Bean
-    RestTemplate restTemplate(){
+    RestTemplate restTemplate() {
         return new RestTemplate(new OkHttp3ClientHttpRequestFactory());
     }
 
