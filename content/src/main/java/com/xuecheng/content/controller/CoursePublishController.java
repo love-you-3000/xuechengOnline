@@ -1,6 +1,7 @@
 package com.xuecheng.content.controller;
 
 import com.xuecheng.content.dto.CoursePreviewDto;
+import com.xuecheng.content.entity.CoursePublish;
 import com.xuecheng.content.service.CoursePublishService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -49,5 +50,14 @@ public class CoursePublishController {
         Long companyId = 1232141425L;
         coursePublishService.publish(companyId , courseId);
     }
+
+    // 供远程调用
+    @ApiOperation("查询课程发布信息")
+    @ResponseBody
+    @GetMapping("/r/coursepublish/{courseId}")
+    public CoursePublish getCoursepublish(@PathVariable("courseId") Long courseId) {
+        return coursePublishService.getCoursePublish(courseId);
+    }
+
 
 }
