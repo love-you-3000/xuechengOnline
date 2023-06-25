@@ -109,6 +109,8 @@ public class MyCourseTablesServiceImpl implements MyCourseTablesService {
         if (status.equals("701002")) {
             xcChooseCourse.setStatus("701001");
             addCourseTables(xcChooseCourse);
+            xcChooseCourseMapper.updateById(xcChooseCourse);
+            log.info("消息消费成功！");
             return true;
         }
         log.debug("课程已支付");
