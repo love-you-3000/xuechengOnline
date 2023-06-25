@@ -1,4 +1,4 @@
-package com.xuecheng.auth;
+package com.xuecheng;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
