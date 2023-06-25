@@ -72,7 +72,7 @@ public class OrderController {
     @GetMapping("/requestpay")
     public void requestpay(String payNo, HttpServletResponse httpResponse) throws IOException {
         //如果payNo不存在则提示重新发起支付
-        XcPayRecord payRecord = orderService.getPayRecordByPayno(payNo);
+        XcPayRecord payRecord = orderService.getPayRecordByPayNo(payNo);
         if (payRecord == null) {
             XuechengException.cast("请重新点击支付获取二维码");
         }

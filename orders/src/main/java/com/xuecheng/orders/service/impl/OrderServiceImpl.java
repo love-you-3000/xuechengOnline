@@ -11,7 +11,10 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.xuecheng.base.exception.XuechengException;
 import com.xuecheng.base.utils.IdWorkerUtils;
 import com.xuecheng.base.utils.QRCodeUtil;
+import com.xuecheng.messagesdk.entity.MqMessage;
+import com.xuecheng.messagesdk.service.MqMessageService;
 import com.xuecheng.orders.config.AlipayConfig;
+import com.xuecheng.orders.config.PayNotifyConfig;
 import com.xuecheng.orders.dto.AddOrderDto;
 import com.xuecheng.orders.dto.PayRecordDto;
 import com.xuecheng.orders.dto.PayStatusDto;
@@ -23,6 +26,11 @@ import com.xuecheng.orders.mapper.XcOrdersMapper;
 import com.xuecheng.orders.mapper.XcPayRecordMapper;
 import com.xuecheng.orders.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessageBuilder;
+import org.springframework.amqp.core.MessageDeliveryMode;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,6 +38,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
@@ -49,59 +58,6 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     XcOrdersGoodsMapper ordersGoodsMapper;
 
-    @Transactional
-    @Override
-    public void saveAliPayStatus(PayStatusDto payStatusDto) {
-//支付流水号
-        String payNo = payStatusDto.getOut_trade_no();
-        XcPayRecord payRecord = getPayRecordByPayno(payNo);
-        if (payRecord == null) {
-            XuechengException.cast("支付记录找不到");
-        }
-        //支付结果
-        String trade_status = payStatusDto.getTrade_status();
-        log.debug("收到支付结果:{},支付记录:{}}", payStatusDto.toString(), payRecord.toString());
-        if (trade_status.equals("TRADE_SUCCESS")) {
-            //支付金额变为分
-            Float totalPrice = payRecord.getTotalPrice() * 100;
-            Float total_amount = Float.parseFloat(payStatusDto.getTotal_amount()) * 100;
-            //校验是否一致
-            if (!payStatusDto.getApp_id().equals(APP_ID) || totalPrice.intValue() != total_amount.intValue()) {
-                //校验失败
-                log.info("校验支付结果失败,支付记录:{},APP_ID:{},totalPrice:{}", payRecord.toString(), payStatusDto.getApp_id(), total_amount.intValue());
-                XuechengException.cast("校验支付结果失败");
-            }
-            log.debug("更新支付结果,支付交易流水号:{},支付结果:{}", payNo, trade_status);
-            XcPayRecord payRecord_u = new XcPayRecord();
-            payRecord_u.setStatus("601002");//支付成功
-            payRecord_u.setOutPayChannel("Alipay");
-            payRecord_u.setOutPayNo(payStatusDto.getTrade_no());//支付宝交易号
-            payRecord_u.setPaySuccessTime(LocalDateTime.now());//通知时间
-            int update1 = payRecordMapper.update(payRecord_u, new LambdaQueryWrapper<XcPayRecord>().eq(XcPayRecord::getPayNo, payNo));
-            if (update1 > 0) {
-                log.info("更新支付记录状态成功:{}", payRecord_u.toString());
-            } else {
-                log.info("更新支付记录状态失败:{}", payRecord_u.toString());
-                XuechengException.cast("更新支付记录状态失败");
-            }
-            //关联的订单号
-            Long orderId = payRecord.getOrderId();
-            XcOrders orders = ordersMapper.selectById(orderId);
-            if (orders == null) {
-                log.info("根据支付记录[{}}]找不到订单", payRecord_u.toString());
-                XuechengException.cast("根据支付记录找不到订单");
-            }
-            XcOrders order_u = new XcOrders();
-            order_u.setStatus("600002");//支付成功
-            int update = ordersMapper.update(order_u, new LambdaQueryWrapper<XcOrders>().eq(XcOrders::getId, orderId));
-            if (update > 0) {
-                log.info("更新订单表状态成功,订单号:{}", orderId);
-            } else {
-                log.info("更新订单表状态失败,订单号:{}", orderId);
-                XuechengException.cast("更新订单表状态失败");
-            }
-        }
-    }
 
     @Autowired
     XcPayRecordMapper payRecordMapper;
@@ -112,6 +68,12 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     OrderService currentProxy;
 
+    @Autowired
+    RabbitTemplate rabbitTemplate;
+
+    @Autowired
+    MqMessageService mqMessageService;
+
     @Value("${pay.alipay.APP_ID}")
     String APP_ID;
 
@@ -121,6 +83,61 @@ public class OrderServiceImpl implements OrderService {
 
     @Value("${pay.alipay.ZFB_PUBLIC_KEY}")
     String ALIPAY_PUBLIC_KEY;
+
+    @Transactional
+    @Override
+    public void saveAliPayStatus(PayStatusDto payStatusDto) {
+        //支付流水号
+        String payNo = payStatusDto.getOut_trade_no();
+        XcPayRecord payRecord = getPayRecordByPayNo(payNo);
+        if (payRecord == null) {
+            XuechengException.cast("支付记录找不到");
+        }
+        //支付结果
+        String trade_status = payStatusDto.getTrade_status();
+        log.debug("收到支付结果:{},支付记录:{}}", payStatusDto, payRecord);
+        if (trade_status.equals("TRADE_SUCCESS")) {
+            //支付金额变为分
+            float totalPrice = payRecord.getTotalPrice() * 100;
+            float total_amount = Float.parseFloat(payStatusDto.getTotal_amount()) * 100;
+            //校验是否一致
+            if (!payStatusDto.getApp_id().equals(APP_ID) || (int) totalPrice != (int) total_amount) {
+                //校验失败
+                log.info("校验支付结果失败,支付记录:{},APP_ID:{},totalPrice:{}", payRecord.toString(), payStatusDto.getApp_id(), (int) total_amount);
+                XuechengException.cast("校验支付结果失败");
+            }
+            log.debug("更新支付结果,支付交易流水号:{},支付结果:{}", payNo, trade_status);
+            XcPayRecord payRecord_u = new XcPayRecord();
+            payRecord_u.setStatus("601002");//支付成功
+            payRecord_u.setOutPayChannel("Alipay");
+            payRecord_u.setOutPayNo(payStatusDto.getTrade_no());//支付宝交易号
+            payRecord_u.setPaySuccessTime(LocalDateTime.now());//通知时间
+            int update1 = payRecordMapper.update(payRecord_u, new LambdaQueryWrapper<XcPayRecord>().eq(XcPayRecord::getPayNo, payNo));
+            if (update1 > 0) {
+                log.info("更新支付记录状态成功:{}", payRecord_u);
+            } else {
+                log.info("更新支付记录状态失败:{}", payRecord_u);
+                XuechengException.cast("更新支付记录状态失败");
+            }
+            //关联的订单号
+            Long orderId = payRecord.getOrderId();
+            XcOrders orders = ordersMapper.selectById(orderId);
+            if (orders == null) {
+                log.info("根据支付记录[{}}]找不到订单", payRecord_u);
+                XuechengException.cast("根据支付记录找不到订单");
+            }
+            orders.setStatus("600002");//支付成功
+            int update = ordersMapper.updateById(orders);
+            if (update > 0) {
+                log.info("更新订单表状态成功,订单号:{}", orderId);
+            } else {
+                log.info("更新订单表状态失败,订单号:{}", orderId);
+                XuechengException.cast("更新订单表状态失败");
+            }
+            MqMessage message = mqMessageService.addMessage("pay_result_notify", orders.getOutBusinessId(), orders.getOrderType(), null);
+            notifyPayResult(message);
+        }
+    }
 
     @Override
     @Transactional
@@ -146,14 +163,14 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public XcPayRecord getPayRecordByPayno(String payNo) {
+    public XcPayRecord getPayRecordByPayNo(String payNo) {
         LambdaQueryWrapper<XcPayRecord> queryWrapper = new LambdaQueryWrapper<>();
         return payRecordMapper.selectOne(queryWrapper.eq(XcPayRecord::getPayNo, payNo));
     }
 
     @Override
     public PayRecordDto queryPayResult(String payNo) {
-        XcPayRecord payRecord = getPayRecordByPayno(payNo);
+        XcPayRecord payRecord = getPayRecordByPayNo(payNo);
         if (payRecord == null) {
             XuechengException.cast("请重新点击支付获取二维码");
         }
@@ -170,7 +187,7 @@ public class OrderServiceImpl implements OrderService {
         //保存支付结果
         currentProxy.saveAliPayStatus(payStatusDto);
         //重新查询支付记录
-        payRecord = getPayRecordByPayno(payNo);
+        payRecord = getPayRecordByPayNo(payNo);
         PayRecordDto payRecordDto = new PayRecordDto();
         BeanUtils.copyProperties(payRecord, payRecordDto);
         return payRecordDto;
@@ -284,4 +301,28 @@ public class OrderServiceImpl implements OrderService {
         return payStatusDto;
     }
 
+    @Override
+    public void notifyPayResult(MqMessage message) {
+        // 创建一个持久化消息
+        Message messageobj = MessageBuilder.withBody(JSON.toJSONString(message).getBytes(StandardCharsets.UTF_8))
+                .setDeliveryMode(MessageDeliveryMode.PERSISTENT).build();
+        Long id = message.getId();
+        CorrelationData correlationData = new CorrelationData(id.toString());
+        // 3.添加callback
+        correlationData.getFuture().addCallback(
+                result -> {
+                    if (result.isAck()) {
+                        // 3.1.ack，消息成功
+                        log.debug("通知支付结果消息发送成功, ID:{}", correlationData.getId());
+                        //删除消息表中的记录
+                        mqMessageService.completed(message.getId());
+                    } else {
+                        // 3.2.nack，消息失败
+                        log.error("通知支付结果消息发送失败, ID:{}, 原因{}", correlationData.getId(), result.getReason());
+                    }
+                },
+                ex -> log.error("消息发送异常, ID:{}, 原因{}", correlationData.getId(), ex.getMessage())
+        );
+        rabbitTemplate.convertAndSend(PayNotifyConfig.PAY_NOTIFY_EXCHANGE_FANOUT, "", messageobj, correlationData);
+    }
 }
