@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
@@ -18,16 +17,16 @@ import org.springframework.core.env.ConfigurableEnvironment;
  **/
 
 @SpringBootApplication
-@ComponentScan("com.xuecheng")
 @MapperScan("com.xuecheng.content.mapper")
 @EnableSwagger2Doc
 @EnableFeignClients(basePackages = {"com.xuecheng.content.feignclient"})
 public class ContentApplication {
     private static final Logger LOG = LoggerFactory.getLogger(ContentApplication.class);
+
     public static void main(String[] args) {
-        SpringApplication app =new  SpringApplication(ContentApplication.class);
+        SpringApplication app = new SpringApplication(ContentApplication.class);
         ConfigurableEnvironment env = app.run(args).getEnvironment();
         LOG.info("启动成功！");
-        LOG.info("地址:\thttp://localhost:{}",env.getProperty("server.port"));
+        LOG.info("地址:\thttp://localhost:{}", env.getProperty("server.port"));
     }
 }
