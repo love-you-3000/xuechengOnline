@@ -1,9 +1,9 @@
 ### 上传文件
-POST {{gateway_host}}/media/upload/coursefile?objectName=course/test2.html
+POST {{gateway_host}}/media/upload/coursefile?objectName=course/203.html
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 
 --WebAppBoundary
-Content-Disposition: form-data; name="filedata"; filename="test.html"
+Content-Disposition: form-data; name="filedata"; filename="203.html"
 Content-Type: application/octet-stream
 
-< d:/test.html
+< d:/course3655378610923263588.html
