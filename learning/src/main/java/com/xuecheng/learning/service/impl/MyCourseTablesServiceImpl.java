@@ -11,6 +11,7 @@ import com.xuecheng.learning.feignclient.ContentServiceClient;
 import com.xuecheng.learning.mapper.XcChooseCourseMapper;
 import com.xuecheng.learning.mapper.XcCourseTablesMapper;
 import com.xuecheng.learning.service.MyCourseTablesService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,7 @@ import java.util.List;
  * @date: 2023/6/21
  **/
 @Service
+@Slf4j
 public class MyCourseTablesServiceImpl implements MyCourseTablesService {
     @Autowired
     XcChooseCourseMapper xcChooseCourseMapper;
@@ -93,6 +95,24 @@ public class MyCourseTablesServiceImpl implements MyCourseTablesService {
             return xcCourseTablesDto;
         }
 
+    }
+
+    @Transactional
+    @Override
+    public boolean saveChooseCourseSuccess(String chooseCourseId) {
+        XcChooseCourse xcChooseCourse = xcChooseCourseMapper.selectById(chooseCourseId);
+        if (xcChooseCourse == null) {
+            log.debug("接收到购买课程的消息，根据选课id在数据库中查询不到选课记录. 选课id:{}", chooseCourseId);
+            return false;
+        }
+        String status = xcChooseCourse.getStatus();
+        if (status.equals("701002")) {
+            xcChooseCourse.setStatus("701001");
+            addCourseTables(xcChooseCourse);
+            return true;
+        }
+        log.debug("课程已支付");
+        return false;
     }
 
 
