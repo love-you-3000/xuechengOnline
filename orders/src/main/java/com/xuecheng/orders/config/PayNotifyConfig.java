@@ -1,8 +1,8 @@
 package com.xuecheng.orders.config;
 
 import com.alibaba.fastjson.JSON;
+import com.xuecheng.messagesdk.entity.MqMessage;
 import com.xuecheng.messagesdk.service.MqMessageService;
-import com.xuecheng.orders.entity.MqMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
